@@ -26,6 +26,8 @@
               @enderror
     
             <button type="submit" class="btn btn-primary">Accedi</button>
+
+            <p class="small mt-2">Non sei ancora registrato? <a href="{{route('register')}}">Clicca qui</a> </p>
           </form>
         </div>
       </div>

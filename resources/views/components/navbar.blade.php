@@ -12,11 +12,9 @@
             @else
             <a class="nav-link active" aria-current="page" href="{{route('login')}}">Inserisci articolo</a>
             @endauth
-
-            
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="{{route('article.index')}}">Articoli</a>
           </li>
           
           @auth

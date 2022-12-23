@@ -27,7 +27,7 @@
     
             <div class="mb-3">
               <label for="image" class="form-label">Immagine</label>
-              <input name="image" type="image" class="form-control @error('image') is-invalid @enderror" id="image">
+              <input name="image" type="file" class="form-control @error('image') is-invalid @enderror" id="image">
             </div>
     
               @error('image')

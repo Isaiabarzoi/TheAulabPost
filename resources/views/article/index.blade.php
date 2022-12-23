@@ -19,7 +19,7 @@
                             <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
                             <p class="card-text">{{$article->subtitle}}</p>
                             <div class="card-footer text-muted d-flex justify-contentbetween align-items-center">
-                                Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}
+                                Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->user->name}}</a>
                             </div>
                         </div>
                         <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi</a>

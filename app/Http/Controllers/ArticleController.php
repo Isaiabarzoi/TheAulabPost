@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -72,6 +73,12 @@ class ArticleController extends Controller
     {
         $articles = $category->articles->sortByDesc('created_at');
         return view('article.by-category', compact('category', 'articles'));
+    }   
+
+    public function byUser(User $user)
+    {
+        $articles = $user->articles->sortByDesc('created_at');
+        return view('article.by-user', compact('user', 'articles'));
     }   
     /**
      * Show the form for editing the specified resource.

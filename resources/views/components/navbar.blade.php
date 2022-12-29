@@ -19,6 +19,11 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('careers')}}">Lavora con noi</a>
           </li>
+          @if(Auth::user()->is_admin)
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard</a>
+            </li>
+          @endif
 
           @auth
           <li class="nav-item dropdown">

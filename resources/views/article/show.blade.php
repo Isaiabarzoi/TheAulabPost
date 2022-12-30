@@ -26,4 +26,8 @@
             </div>
         </div>
     </div>
+    @if (Auth::user ()&& Auth::user()->is_revisor)
+        <a href="{{route('revisor.acceptArticle', compact ('article'))}}" class="btn btn-success text-white my-5 ">Accetta articolo</a>
+        <a href="{{route('revisor.rejectArticle', compact ('article'))}}" class="btn btn-danger text-white my-5 ">Rifiuta articolo</a>
+    @endif
 </x-layout>

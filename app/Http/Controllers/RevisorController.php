@@ -12,7 +12,7 @@ class RevisorController extends Controller
         $acceptedArticles = Article::where('is_accepted', true)->get();
         $rejectedArticles = Article::where('is_accepted', false)->get();
 
-        return view('revisor.dashboard', compact('nrevisionedArticles', 'acceptedArticles', 'rejectedArticles'));
+        return view('revisor.dashboard', compact('unrevisionedArticles', 'acceptedArticles', 'rejectedArticles'));
     }
 
     public function acceptArticle(Article $article){
@@ -20,10 +20,10 @@ class RevisorController extends Controller
             'is_accepted' => true,
         ]);
         
-        return redirect(route('revisor.dashboard'))->with('message', 'Hai accetato l\'articolo');
+        return redirect(route('revisor.dashboard'))->with('message', 'Hai accettato l\'articolo');
     }
 
-    public function rejectedArticle(Article $article){
+    public function rejectArticle(Article $article){
         $article->update([
             'is_accepted' => false,
         ]);

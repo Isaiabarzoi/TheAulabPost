@@ -20,8 +20,6 @@ use App\Http\Controllers\RevisorController;
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
 //Rotte che gestiscono gli articoli
-Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
-Route::post('/article/create', [ArticleController::class, 'store'])->name('article.store');
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 
@@ -53,4 +51,10 @@ Route::middleware('revisor')-> group (function(){
     Route::get ('/revisor/{article}/reject', [RevisorController::class, 'rejectArticle'])-> name ('revisor.rejectArticle');
 
     Route::get ('/revisor/{article}/undo', [RevisorController::class, 'undoArticle'])-> name ('revisor.undoArticle');
+});
+
+//Rote per la gestione del writer
+Route::middleware('writer')-> group (function(){
+    Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
+    Route::get('/article/store', [ArticleController::class, 'store'])->name('article.store');
 });

@@ -18,7 +18,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>Articoli da revisionare</h2>
-                <x-articles-table :article="$unreviosionedArticles"/>
+                <x-articles-table :article="$unrevisionedArticles"/>
             </div>
         </div>
     </div>

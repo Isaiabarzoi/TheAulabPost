@@ -56,5 +56,5 @@ Route::middleware('revisor')-> group (function(){
 //Rote per la gestione del writer
 Route::middleware('writer')-> group (function(){
     Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
-    Route::get('/article/store', [ArticleController::class, 'store'])->name('article.store');
+    Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
 });

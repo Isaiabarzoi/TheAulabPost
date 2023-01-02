@@ -18,7 +18,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>Articoli da revisionare</h2>
-                <x-articles-table :article="$unreviosionedAricles"/>
+                <x-articles-table :article="$unreviosionedArticles"/>
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>Articoli pubblicati</h2>
-                <x-articles-table :article="$acceptedAricles"/>
+                <x-articles-table :article="$acceptedArticles"/>
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>Richieste per ruolo redattore </h2>
-                <x-articles-table :article="$rejectedAricles"/>
+                <x-articles-table :article="$rejectedArticles"/>
             </div>
         </div>
     </div>

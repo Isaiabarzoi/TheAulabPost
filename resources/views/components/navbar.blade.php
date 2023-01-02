@@ -24,13 +24,7 @@
               <a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard</a>
             </li>
           @endif
-          {{-- @if(Auth::user()->is_revisor)
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('revisor.dashboard')}}">Dashboard</a>
-            </li>
-          @endif --}}
           
-
           @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

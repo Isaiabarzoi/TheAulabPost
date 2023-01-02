@@ -52,7 +52,7 @@ class PublicController extends Controller
                  break;
         }
 
-        $user -> update ();
+        $user->update ();
 
         return redirect (route ('home')) -> with ('message', 'Grazie per averci contattato');
     }

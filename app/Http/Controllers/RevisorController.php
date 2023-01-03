@@ -33,7 +33,7 @@ class RevisorController extends Controller
 
     public function undoArticle(Article $article){
         $article->update([
-            'is_accepted' => false,
+            'is_accepted' => NULL,
         ]);
         
         return redirect(route('revisor.dashboard'))->with('message', 'Hai riportato l\'articolo scelto di nuovo in revisione');

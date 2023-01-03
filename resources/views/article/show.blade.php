@@ -22,7 +22,11 @@
             <hr>
             <p>{{$article->body}}</p>
             <div class="text-center">
-                <a href="{{route('article.index')}}" class="btn btn-info text-white my-5">Torna indietro</a>
+                @if (Auth::user() && Auth::user()->is_revisor)
+                    <a href="{{route('revisor.dashboard')}}" class="btn btn-info text-white my-5">Torna indietro</a>
+                @else   
+                    <a href="{{route('article.index')}}" class="btn btn-info text-white my-5">Torna indietro</a>
+                @endif
             </div>
         </div>
     </div>

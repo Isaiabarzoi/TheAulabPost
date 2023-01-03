@@ -30,12 +30,12 @@
               <li><a class="dropdown-item" href="">Profilo</a></li>
               @if(Auth::user()->is_admin)
               <li class="nav-item">
-                <a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard</a>
+                <a class="nav-link" href="{{route('admin.dashboard')}}">Gestione utenti</a>
               </li>
               @endif
               @if(Auth::user()->is_revisor)
               <li class="dropdown-item">
-                <a class="nav-link" href="{{route('revisor.dashboard')}}">Dashboard</a>
+                <a class="nav-link" href="{{route('revisor.dashboard')}}">Revisione articoli</a>
               </li>
             @endif
               <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>

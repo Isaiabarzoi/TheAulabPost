@@ -1,6 +1,12 @@
 <x-layout>
 
-  <div class="container">
+  <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="row justify-content-center">
+        <h1 class="display-1">Registrati</h1>
+    </div>
+  </div>
+
+  <div class="container my-5">
     <div class="row">
       <div class="col-12">
         <form method="POST" action="{{route('register')}}">

@@ -1,11 +1,13 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light nav-bar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{route('home')}}">Navbar scroll</a>
+      <a class="navbar-brand" href="{{route('home')}}">
+        <img src="/logo/The Aulab Post-logos_transparent.png" alt="" height="70vh">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
             @auth
             <a class="nav-link active" aria-current="page" href="{{route('article.create')}}">Inserisci articolo</a>          
@@ -14,30 +16,30 @@
             @endauth
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('article.index')}}">Articoli</a>
+            <a class="nav-link active" href="{{route('article.index')}}">Articoli</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('careers')}}">Lavora con noi</a>
+            <a class="nav-link active" href="{{route('careers')}}">Lavora con noi</a>
           </li>
         
           
           @auth
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto {{Auth::user()->name}}
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="">Profilo</a></li>
               @if(Auth::user()->is_admin)
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('admin.dashboard')}}">Gestione utenti</a>
+              <li>
+                <a class="dropdown-item" href="{{route('admin.dashboard')}}">Gestione utenti</a>
               </li>
               @endif
               @if(Auth::user()->is_revisor)
-              <li class="dropdown-item">
-                <a class="nav-link" href="{{route('revisor.dashboard')}}">Revisione articoli</a>
+              <li>
+                <a class="dropdown-item" href="{{route('revisor.dashboard')}}">Revisione articoli</a>
               </li>
-            @endif
+              @endif
               <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
               <form method="POST" action="{{route('logout')}}" id="form-logout">
                 @csrf
@@ -47,7 +49,7 @@
           @endauth
           @guest
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="nabvarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="#" id="nabvarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto Ospite
             </a>
             <ul class="dropdown-menu">

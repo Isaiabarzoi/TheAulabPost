@@ -11,7 +11,7 @@
     <div class="container my-5">
         <div class="row justify-content-around">
             <div class="col-12 col-md-8">
-                <img src="{{Storage::url($article->image)}}" class="card-fluid my-3" alt="">
+                <img src="{{Storage::url($article->image)}}" class="img-fluid my-3" alt="">
             </div>
             <div class="text-center">
                 <h2>{{$article->subtitle}}</h2>

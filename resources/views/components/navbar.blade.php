@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light nav-bar">
+<nav class="navbar navbar-expand-lg nav-bar">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{route('home')}}">
         <img src="/logo/The Aulab Post-logos_transparent.png" alt="" height="70vh">

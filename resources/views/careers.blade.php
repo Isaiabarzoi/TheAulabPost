@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white" >    
+    <div class="container-fluid p-5 text-center text-dark" >    
         <div class= "row justify-content-center"> 
             <h1 class="display-1">
                 Lavora con noi
@@ -10,12 +10,12 @@
     <div class="container my-5">
         <div class="row justify-content-center align-content-center border rounded p-2 shadow">
             <div class="col-12 col-md-6">
-                <h2> Lavora come amministratore</h2>
-                <p> Cosa farai: </p>
-                <h2> Lavora come revisore </h2>
-                <p> Cosa farai: </p>
-                <h2> Lavora come redattore </h2>
-                <p> Cosa farai: </p>
+                <h2> Amministratore</h2>
+                <p> Cosa farai: Gestione completa delle richieste di lavoro e di amministrazione, revisione ed accettazione degli articoli, modifica e cancellazione dei tags e delle categorie</p>
+                <h2> Revisore </h2>
+                <p> Cosa farai: Revisione dei nuovi articoli inseriti in attesa di approvazione </p>
+                <h2> Redattore </h2>
+                <p> Cosa farai: Scrittura degli articoli ed inserimento categoria </p>
             </div>
             <div class="col-12 col-md-6">
                 @if ($errors -> any ())

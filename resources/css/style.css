@@ -1,8 +1,19 @@
 /* Navbar */
+nav {
+    font-family: 'Old Standard TT', serif;
+    font-size: 1.2rem; 
+    background-color: #B0BDC2;
+}
+
+h1 {
+    font-family: 'Old Standard TT', serif;
+}
+
 .nav-bar{
     position: relative;
     padding: 0 2rem;
     z-index: 9999;
+    
 }
 
 .nav-bar.sticky-top {

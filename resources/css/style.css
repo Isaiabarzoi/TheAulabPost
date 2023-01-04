@@ -11,5 +11,7 @@
     z-index: 9999;
 }
 .height-image {
-    height: 800px;
+    height: 500px;
+    border-radius: 10px;
+    shape-margin: 10px;
 }

@@ -11,8 +11,8 @@
           <li class="nav-item">
             @auth
             <a class="nav-link active" aria-current="page" href="{{route('article.create')}}">Inserisci articolo</a>          
-            @else
-            <a class="nav-link active" aria-current="page" href="{{route('login')}}">Inserisci articolo</a>
+            {{-- @else
+            <a class="nav-link active" aria-current="page" href="{{route('login')}}">Inserisci articolo</a> --}}
             @endauth
           </li>
           <li class="nav-item">
@@ -21,8 +21,6 @@
           <li class="nav-item">
             <a class="nav-link active" href="{{route('careers')}}">Lavora con noi</a>
           </li>
-        
-          
           @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,7 +48,7 @@
           @guest
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" id="nabvarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Benvenuto Ospite
+             Accedi
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>

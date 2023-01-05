@@ -18,6 +18,11 @@
                             <h5 class="card-title">{{$article->title}}</h5>
                             <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
                             <p class="card-text">{{$article->subtitle}}</p>
+                            <p class="small fst-italic text-capitalize">
+                                @foreach ($article->tags as $tag)
+                                  #{{$tag->name}}                                
+                                @endforeach
+                            </p>
                             <div class="card-footer text-muted d-flex justify-contentbetween align-items-center">
                               <a class = "" href= "{{route ('article.show', compact('article'))}}">  Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</a>
                               <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi</a>

@@ -23,15 +23,18 @@
             <p>{{$article->body}}</p>
             <div class="text-center">
                 @if (Auth::user() && Auth::user()->is_revisor)
-                    <a href="{{route('revisor.dashboard')}}" class="btn btn-info text-white my-5">Torna indietro</a>
+                    <a href="{{route('revisor.dashboard')}}" class="btn btn-white text-dark border my-5">Torna indietro</a>
                 @else   
-                    <a href="{{route('article.index')}}" class="btn btn-info text-white my-5">Torna indietro</a>
+                    <a href="{{route('article.index')}}" class="btn btn-white text-dark border my-5">Torna indietro</a>
                 @endif
             </div>
         </div>
     </div>
-    @if (Auth::user() && Auth::user()->is_revisor)
-        <a href="{{route('revisor.acceptArticle', compact ('article'))}}" class="btn btn-success text-white my-5 ">Accetta articolo</a>
-        <a href="{{route('revisor.rejectArticle', compact ('article'))}}" class="btn btn-danger text-white my-5 ">Rifiuta articolo</a>
-    @endif
+    <div class="text-center">
+            @if (Auth::user() && Auth::user()->is_revisor)
+                <a href="{{route('revisor.acceptArticle', compact ('article'))}}" class="btn btn-success text-white my-5 ">Accetta articolo</a>
+                <a href="{{route('revisor.rejectArticle', compact ('article'))}}" class="btn btn-danger text-white my-5 ">Rifiuta articolo</a>
+            @endif
+    </div>
+    
 </x-layout>

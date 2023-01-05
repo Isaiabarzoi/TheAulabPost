@@ -56,6 +56,16 @@
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
 
+            <div class="mb-3">
+              <label for="tags" class="form-label">Tags:</label>
+              <input name="tags" id="tags" class="form-control" value="{{old('tags')}}" @error('tags') is-invalid @enderror>
+              <span class="small fst-italic">Dividi ogni tag con una virgola</span>
+            </div>
+
+            @error('tags')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            
             <div class="mt-2">
                 <button class="btn btn-info text-white">Inserisci articolo</button>
                 <a class="btn btn-outline-info" href="{{route('home')}}">Torna alla home</a>

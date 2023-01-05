@@ -32,6 +32,11 @@
                         </a> 
                         <div class="carousel-caption d-none d-md-block">
                           <h5 class="text-dark">{{$article->title}}</h5>
+                          <p class="small fst-italic text-capitalize">
+                            @foreach ($article->tags as $tag)
+                              #{{$tag->name}}                                
+                            @endforeach
+                          </p>
                           <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted text-capitalize">{{$article->category->name}}</a>
                         </div>
                       </div>

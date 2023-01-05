@@ -1,5 +1,10 @@
 <x-layout>
 
+    <x-slot name="meta">
+        <meta name="keywords" content="{{$article->getTags()}}">
+        <meta name="author" content="{{$article->user->name}}">
+    </x-slot>
+
     <div class="container-fluid p-5 text-center text-dark">
         <div class="row justify-content-center">
             <h1 class="display-1">
@@ -22,11 +27,7 @@
             <hr>
             <p>{{$article->body}}</p>
             <div class="text-center">
-                @if (Auth::user() && Auth::user()->is_revisor)
-                    <a href="{{route('revisor.dashboard')}}" class="btn btn-white text-dark border my-5">Torna indietro</a>
-                @else   
-                    <a href="{{route('article.index')}}" class="btn btn-white text-dark border my-5">Torna indietro</a>
-                @endif
+                    <input action="action" type="button" value="Torna indietro" class="btn btn-white text-dark border my-5" onclick="window.history.go(-1); return false;" />
             </div>
         </div>
     </div>

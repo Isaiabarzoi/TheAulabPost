@@ -25,3 +25,8 @@ h1 {
     height: 500px;
     border-radius: 10px;
 }
+
+table{
+    border-radius: 10px;
+    overflow: hidden;
+}

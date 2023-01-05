@@ -31,7 +31,7 @@
                                 Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a>
                             </div>
                         </div>
-                        <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi</a>
+                        <a href="{{route('article.show', compact('article'))}}" class="btn btn-dark text-white">Leggi</a>
                     </div>
                 </div>
             @endforeach

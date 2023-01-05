@@ -11,18 +11,18 @@
               <label for="title" class="form-label">Titolo</label>
               <input name="title" type="text" class="form-control @error('title') is-invalid @enderror" id="title" value="{{old('title')}}">
     
-              @error('title')
+              {{-- @error('title')
                  <div class="alert alert-danger">{{ $message }}</div>
-              @enderror
+              @enderror --}}
     
             </div>
-            <div class="mb-3">
+            <div>
                 <label for="subtitle" class="form-label">Sottotitolo</label>
                 <input name="subtitle" type="text" class="form-control @error('subtitle') is-invalid @enderror" id="subtitle" value="{{old('subtitle')}}">
               </div>
     
               @error('subtitle')
-                <div class="alert alert-danger">{{ $message }}</div>
+                <h6 class="text-danger">{{ $message }}</h6>
               @enderror
     
             <div class="mb-3">
@@ -57,9 +57,8 @@
             @enderror
 
             <div class="mb-3">
-              <label for="tags" class="form-label">Tags:</label>
-              <input name="tags" id="tags" class="form-control" value="{{old('tags')}}" @error('tags') is-invalid @enderror>
-              <span class="small fst-italic">Dividi ogni tag con una virgola</span>
+              <label for="tags" class="form-label">Tags</label>
+              <input name="tags" id="tags" class="form-control" placeholder="Dividi ogni tag con una virgola" value="{{old('tags')}}" @error('tags') is-invalid @enderror>
             </div>
 
             @error('tags')
@@ -67,8 +66,8 @@
             @enderror
             
             <div class="mt-2">
-                <button class="btn btn-info text-white">Inserisci articolo</button>
-                <a class="btn btn-outline-info" href="{{route('home')}}">Torna alla home</a>
+                <button class="btn btn-dark text-white">Inserisci articolo</button>
+                <a class="btn btn-outline-dark" href="{{route('home')}}">Torna alla home</a>
             </div>
           </form>
         </div>

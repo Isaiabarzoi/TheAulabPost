@@ -16,7 +16,7 @@
                         <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="">
                         <div class="card-body">
                             <h5 class="card-title">{{$article->title}}</h5>
-                            @if ($article->ctaegory)
+                            @if($article->category)
                                 <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>                            
                             @else
                                 <p class="smaal text-muted fst-capitalize">Non categorizzato</p>
@@ -28,7 +28,7 @@
                                 @endforeach
                             </p>
                             <div class="card-footer text-muted d-flex justify-contentbetween align-items-center">
-                                Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->user->name}}</a>
+                                Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a>
                             </div>
                         </div>
                         <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi</a>

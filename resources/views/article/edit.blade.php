@@ -15,8 +15,7 @@
             @csrf
 
             
-             @method('PUT')
-            
+             
             
             <div class="mb-3">
               <label for="title" class="form-label">Titolo</label>

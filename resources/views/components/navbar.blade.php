@@ -38,6 +38,11 @@
                 <a class="dropdown-item" href="{{route('revisor.dashboard')}}">Revisione articoli</a>
               </li>
               @endif
+              @if(Auth::user()->is_writer)
+              <li>
+                <a class="dropdown-item" href="{{route('writer.dashboard')}}"> I miei articoli</a>
+              </li>
+              @endif
               <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
               <form method="POST" action="{{route('logout')}}" id="form-logout">
                 @csrf

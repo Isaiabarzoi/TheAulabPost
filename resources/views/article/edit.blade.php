@@ -1,15 +1,26 @@
 <x-layout>
+    <div class="container-fluid p-5 text-center text-dark" >    
+        <div class= "row justify-content-center"> 
+            <h1 class="display-1">
+                Modifica articolo
+            </h1>
+        </div>
+    </div>
 
     <div class="container">
       <div class="row">
-        <div class="col-12">
-          <form method="POST" action="{{route('article.store')}}" enctype="multipart/form-data">
+        <div class="col-12 col-md-8">
+          <form method="POST" action="{{route('article.update')}}" enctype="multipart/form-data">
   
             @csrf
-  
+
+            
+             @method('PUT')
+            
+            
             <div class="mb-3">
               <label for="title" class="form-label">Titolo</label>
-              <input name="title" type="text" class="form-control @error('title') is-invalid @enderror" id="title" value="{{old('title')}}">
+              <input name="title" type="text" class="form-control @error('title') is-invalid @enderror" id="title" value="{{$article->title}}">
     
               @error('title')
                  <div class="alert alert-danger">{{ $message }}</div>
@@ -18,7 +29,7 @@
             </div>
             <div>
                 <label for="subtitle" class="form-label">Sottotitolo</label>
-                <input name="subtitle" type="text" class="form-control @error('subtitle') is-invalid @enderror" id="subtitle" value="{{old('subtitle')}}">
+                <input name="subtitle" type="text" class="form-control @error('subtitle') is-invalid @enderror" id="subtitle" value="{{$article->subtitle}}">
               </div>
     
               @error('subtitle')
@@ -35,10 +46,10 @@
               @enderror
     
             <div class="mb-3">
-                <label for="category" class="form-label">Categoria</label>
+                <label for="category" class="form-label">Categoria:</label>
                 <select name="category" class="form-control text-capitalize @error('category') is-invalid @enderror" id="category">
                     @foreach ($categories as $category)
-                        <option value="{{$category->id}}">{{$category->name}}</option>
+                        <option value="{{$category->id}}" @if ($article->category && $category->id == $article->category->id) selected @endif>{{$category->name}}</option>
                     @endforeach
                 </select>
             </div>
@@ -49,7 +60,7 @@
     
             <div class="mb-3">
                 <label for="body" class="form-lable">Corpo del testo</label>
-                <textarea name="body" id="body" cols="30" rows="7" class="form-control" @error('body') is-invalid @enderror>{{old('body')}}</textarea>
+                <textarea name="body" id="body" cols="30" rows="7" class="form-control" @error('body') is-invalid @enderror>{{$article->body}}</textarea>
             </div>
 
             @error('body')
@@ -58,7 +69,7 @@
 
             <div class="mb-3">
               <label for="tags" class="form-label">Tags</label>
-              <input name="tags" id="tags" class="form-control" placeholder="Dividi ogni tag con una virgola" value="{{old('tags')}}" @error('tags') is-invalid @enderror>
+              <input name="tags" id="tags" class="form-control" placeholder="Dividi ogni tag con una virgola" value="{{$article->tags->implode('name', ', ')}}" @error('tags') is-invalid @enderror>
             </div>
 
             @error('tags')
@@ -66,7 +77,7 @@
             @enderror
             
             <div class="mt-2">
-                <button class="btn btn-dark text-white">Inserisci articolo</button>
+                <button class="btn btn-dark text-white">Modifica articolo</button>
                 <a class="btn btn-outline-dark" href="{{route('home')}}">Torna alla home</a>
             </div>
           </form>

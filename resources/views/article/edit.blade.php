@@ -1,6 +1,6 @@
 <x-layout>
-    <div class="container-fluid p-5 text-center text-dark" >    
-        <div class= "row justify-content-center"> 
+    <div class="container-fluid p-5 text-center text-dark">    
+        <div class="row justify-content-center"> 
             <h1 class="display-1">
                 Modifica articolo
             </h1>
@@ -13,48 +13,45 @@
           <form method="POST" action="{{route('article.update')}}" enctype="multipart/form-data">
   
             @csrf
-
-            
-             
             
             <div class="mb-3">
               <label for="title" class="form-label">Titolo</label>
-              <input name="title" type="text" class="form-control @error('title') is-invalid @enderror" id="title" value="{{$article->title}}">
+              <input name="title" type="text" class="form-control" @error('title') is-invalid @enderror id="title" value="{{$article->title}}">
     
               @error('title')
-                 <div class="alert alert-danger">{{ $message }}</div>
+                 <div class="alert alert-danger">{{$message}}</div>
               @enderror
     
             </div>
             <div>
                 <label for="subtitle" class="form-label">Sottotitolo</label>
-                <input name="subtitle" type="text" class="form-control @error('subtitle') is-invalid @enderror" id="subtitle" value="{{$article->subtitle}}">
+                <input name="subtitle" type="text" class="form-control" @error('subtitle') is-invalid @enderror id="subtitle" value="{{$article->subtitle}}">
               </div>
     
               @error('subtitle')
-                <h6 class="text-danger">{{ $message }}</h6>
+                <h6 class="text-danger">{{$message}}</h6>
               @enderror
     
             <div class="mb-3">
               <label for="image" class="form-label">Immagine</label>
-              <input name="image" type="file" class="form-control @error('image') is-invalid @enderror" id="image">
+              <input name="image" type="file" class="form-control" @error('image') is-invalid @enderror id="image">
             </div>
     
               @error('image')
-                <div class="alert alert-danger">{{ $message }}</div>
+                <div class="alert alert-danger">{{$message}}</div>
               @enderror
     
             <div class="mb-3">
                 <label for="category" class="form-label">Categoria:</label>
-                <select name="category" class="form-control text-capitalize @error('category') is-invalid @enderror" id="category">
+                <select name="category" class="form-control text-capitalize" @error('category') is-invalid @enderror id="category">
                     @foreach ($categories as $category)
-                        <option value="{{$category->id}}" @if ($article->category && $category->id == $article->category->id) selected @endif>{{$category->name}}</option>
+                        <option value="{{$category->id}}" @if($article->category && $category->id == $article->category->id) selected @endif>{{$category->name}}</option>
                     @endforeach
                 </select>
             </div>
     
               @error('category')
-                <div class="alert alert-danger">{{ $message }}</div>
+                <div class="alert alert-danger">{{$message}}</div>
               @enderror
     
             <div class="mb-3">
@@ -63,7 +60,7 @@
             </div>
 
             @error('body')
-            <div class="alert alert-danger">{{ $message }}</div>
+            <div class="alert alert-danger">{{$message}}</div>
             @enderror
 
             <div class="mb-3">
@@ -72,7 +69,7 @@
             </div>
 
             @error('tags')
-            <div class="alert alert-danger">{{ $message }}</div>
+            <div class="alert alert-danger">{{$message}}</div>
             @enderror
             
             <div class="mt-2">

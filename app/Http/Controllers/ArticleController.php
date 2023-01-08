@@ -117,10 +117,10 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        $request->validate ([
-            'title' => 'required|min:5|unique:articles,title' . $article->id,
-            'subtitle' => 'required|min:5|unique:articles,subtitle' . $article->id,
-            'body' => 'required!min:10',
+        $request->validate([
+            'title' => 'required|min:5|unique:articles,title,' . $article->id,
+            'subtitle' => 'required|min:5|unique:articles,subtitle,' . $article->id,
+            'body' => 'required|min:10',
             'image' => 'image',
             'category' => 'required', 
             'tags' => 'required',
@@ -133,7 +133,7 @@ class ArticleController extends Controller
             'category_id' => $request->category,
         ]);
 
-        if ($request->image) {
+        if($request->image){
             Storage::delete($article->image);
             $article->update([
                 'image' => $request->file('image')->store('public/images'),
@@ -141,18 +141,19 @@ class ArticleController extends Controller
         }
 
 
-        $tags = explode (', ', $request->tags);
+        $tags = explode(', ', $request->tags);
         $newTags = [];
 
-        foreach ($tags as $tag) {
+        foreach($tags as $tag){
             $newTag = Tag::updateOrCreate([
                 'name' => $tag,
             ]);
-            $newTags [] = $newTag->id;
+            $newTags[] = $newTag->id;
         }
 
         $article->tags()->sync($newTags);
-        return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente aggiornato l\'articolo scelto');
+
+        return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente aggiornato l\'articolo');
     }
 
     /**
@@ -163,7 +164,13 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        foreach ($article->tags as $tag) {
+            $article->tags()->detach($tag);
+        }
+
+        $article->delete();
+
+        return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente eliminato l\'articolo');
     }
     
     public function articleSearch(Request $request) {

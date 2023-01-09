@@ -38,6 +38,7 @@
                             @endforeach
                           </p>
                           <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted text-capitalize">{{$article->category->name}}</a>
+                          <span class="text-muted small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
                         </div>
                       </div>
                         @endforeach

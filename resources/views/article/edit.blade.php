@@ -10,7 +10,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-8">
-          <form method="POST" action="{{route('article.update')}}" enctype="multipart/form-data">
+          <form method="POST" action="{{route('article.update',compact('article') )}}" enctype="multipart/form-data">
             
             @csrf
             

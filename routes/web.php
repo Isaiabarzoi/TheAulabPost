@@ -22,7 +22,7 @@ Route::get('/', [PublicController::class, 'home'])->name('home');
 
 //Rotte che gestiscono gli articoli
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
-Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/article/{article:slug}/show', [ArticleController::class, 'show'])->name('article.show');
 
 //Rotte per le ricerche
 Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');

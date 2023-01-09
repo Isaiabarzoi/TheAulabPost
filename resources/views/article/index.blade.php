@@ -21,6 +21,7 @@
                             @else
                                 <p class="smaal text-muted fst-capitalize">Non categorizzato</p>
                             @endif
+                            <span class="text-muted small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
                             <p class="card-text">{{$article->subtitle}}</p>
                             <p class="small fst-italic text-capitalize">
                                 @foreach ($article->tags as $tag)

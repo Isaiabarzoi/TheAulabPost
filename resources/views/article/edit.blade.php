@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-12 col-md-8">
           <form method="POST" action="{{route('article.update')}}" enctype="multipart/form-data">
-  
+            
             @csrf
             
             <div class="mb-3">

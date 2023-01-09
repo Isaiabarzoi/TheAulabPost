@@ -28,7 +28,7 @@
                                 @endforeach
                             </p>
                             <div class="card-footer text-muted d-flex justify-contentbetween align-items-center">
-                                Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a>
+                                Redatto il {{$article->created_at->format('d/m/Y')}} da &nbsp <a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a>
                             </div>
                         </div>
                         <a href="{{route('article.show', compact('article'))}}" class="btn btn-dark text-white">Leggi</a>

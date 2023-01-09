@@ -57,22 +57,27 @@ Route::middleware('admin')-> group (function(){
 
 //Rotta per la gestion revisor
 Route::middleware('revisor')-> group (function(){
-    Route::get ('/revisor/dashboard', [RevisorController::class, 'dashboard'])-> name ('revisor.dashboard');
+    Route::get ('/revisor/dashboard', [RevisorController::class, 'dashboard'])->name('revisor.dashboard');
 
-    Route::get ('/revisor/{article}/accept', [RevisorController::class, 'acceptArticle'])-> name ('revisor.acceptArticle');
+    Route::get ('/revisor/{article}/accept', [RevisorController::class, 'acceptArticle'])->name('revisor.acceptArticle');
 
-    Route::get ('/revisor/{article}/reject', [RevisorController::class, 'rejectArticle'])-> name ('revisor.rejectArticle');
+    Route::get ('/revisor/{article}/reject', [RevisorController::class, 'rejectArticle'])->name('revisor.rejectArticle');
 
-    Route::get ('/revisor/{article}/undo', [RevisorController::class, 'undoArticle'])-> name ('revisor.undoArticle');
+    Route::get ('/revisor/{article}/undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
 });
 
 //Rote per la gestione del writer
 Route::middleware('writer')-> group (function(){
     Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
+
     Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
+
     Route::get('/writer/dashboard/', [WriterController::class, 'dashboard'])->name('writer.dashboard');
+
     Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');
+
     Route::put('/article/{article}/update', [ArticleController::class, 'update'])->name('article.update');
+
     Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'])->name('article.destroy');
 });
 

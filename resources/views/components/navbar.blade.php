@@ -27,7 +27,7 @@
               Benvenuto {{Auth::user()->name}}
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="">Profilo</a></li>
+              {{-- <li><a class="dropdown-item" href="">Profilo</a></li> --}}
               @if(Auth::user()->is_admin)
               <li>
                 <a class="dropdown-item" href="{{route('admin.dashboard')}}">Gestione utenti</a>

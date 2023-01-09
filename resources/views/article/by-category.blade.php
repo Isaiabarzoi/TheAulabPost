@@ -22,7 +22,7 @@
                             Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}
                         </div>
                     </div>
-                    <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi</a>
+                    <a href="{{route('article.show', compact('article'))}}" class="btn btn-dark text-white">Leggi</a>
                 </div>
             </div>
         @endforeach

@@ -15,4 +15,7 @@ class WriterController extends Controller
 
         return view ('writer.dashboard', compact('acceptedArticles', 'rejectedArticles', 'unrevisionedArticles'));
     }
+
+    
+    
 }

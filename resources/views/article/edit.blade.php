@@ -13,7 +13,7 @@
           <form method="POST" action="{{route('article.update',compact('article') )}}" enctype="multipart/form-data">
             
             @csrf
-            
+            @method('PUT')
             <div class="mb-3">
               <label for="title" class="form-label">Titolo</label>
               <input name="title" type="text" class="form-control" @error('title') is-invalid @enderror id="title" value="{{$article->title}}">

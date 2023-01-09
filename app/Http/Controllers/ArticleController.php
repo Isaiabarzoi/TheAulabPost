@@ -143,7 +143,10 @@ class ArticleController extends Controller
             ]);
         }
 
-
+        $article->update([
+            'is_accepted' => NULL,
+        ]);
+        
         $tags = explode(', ', $request->tags);
         $newTags = [];
 

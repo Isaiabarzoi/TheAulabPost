@@ -79,6 +79,8 @@ Route::middleware('writer')-> group (function(){
     Route::put('/article/{article}/update', [ArticleController::class, 'update'])->name('article.update');
 
     Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'])->name('article.destroy');
+
+    
 });
 
 

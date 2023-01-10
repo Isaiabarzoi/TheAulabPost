@@ -39,16 +39,16 @@
                           </p>
                           <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-dark text-capitalize">{{$article->category->name}}</a>
                           <span class=" fs-6 text-dark small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
+                          @if(strlen($article->body) <= 50)
+                          <p>
+                            {{$article->body}}
+                          </p>
+                          @else
+                          <p class="text-truncate">
+                            {{$article->body}}
+                          </p>
+                          @endif
                         </div>
-                        @if(strlen($article->body) <= 50)
-                        <p>
-                          {{$article->body}}
-                        </p>
-                        @else
-                        <p class="text-truncate">
-                          {{$article->body}}
-                        </p>
-                        @endif
                       </div>
                         @endforeach
                     </div>

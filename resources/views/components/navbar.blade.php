@@ -10,20 +10,20 @@
         <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
             @auth
-            <a class="nav-link active" aria-current="page" href="{{route('article.create')}}">Inserisci articolo</a>          
+            <a class="nav-link active nav-line" aria-current="page" href="{{route('article.create')}}">Inserisci articolo</a>          
             {{-- @else
             <a class="nav-link active" aria-current="page" href="{{route('login')}}">Inserisci articolo</a> --}}
             @endauth
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="{{route('article.index')}}">Articoli</a>
+            <a class="nav-link active nav-line" href="{{route('article.index')}}">Articoli</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="{{route('careers')}}">Lavora con noi</a>
+            <a class="nav-link active nav-line" href="{{route('careers')}}">Lavora con noi</a>
           </li>
-          @auth
+          @auth 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active nav-line" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto {{Auth::user()->name}}
             </a>
             <ul class="dropdown-menu">
@@ -52,7 +52,7 @@
           @endauth
           @guest
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="nabvarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active nav-line" href="#" id="nabvarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              Accedi
             </a>
             <ul class="dropdown-menu">

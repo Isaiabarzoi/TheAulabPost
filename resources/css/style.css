@@ -2,7 +2,7 @@
 nav {
     font-family: 'Old Standard TT', serif;
     font-size: 1.2rem; 
-    background-color: #B0BDC2;
+    background-color: #D3E2E8;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -23,10 +23,31 @@ h1 {
     padding: 0 2rem;
     z-index: 9999;
 }
-.height-image {
-    height: 500px;
-    border-radius: 10px;
-}
+.nav-line {
+    color: #18272F;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .nav-line::before {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #18272F;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+  .nav-line:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  
 
 table{
     border-radius: 10px;
@@ -44,3 +65,36 @@ table{
 .zoom:hover {
     transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
+
+/* Carousel */
+.carousel-caption-custom{
+    position: absolute;
+    top: 40%;
+    right: 15%;
+}
+
+.height-image {
+    height: 500px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    size: cover;
+}
+
+.bg-carousel{
+    background-color: #D3E2E8;
+    border-radius: 10px;;
+}
+
+
+@media screen and (max-width:600px){
+    .w-50{
+        width: 100% !important;
+        z-index: 1;
+    }
+    .carousel-caption-custom{
+        top: 0px;
+        right: 50%;
+        z-index: 2;
+    }
+}

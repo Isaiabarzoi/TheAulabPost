@@ -24,13 +24,13 @@
                       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
                     </div>
-                    <div class="carousel-inner">
+                    <div class="carousel-inner position-relative bg-carousel">
                         @foreach ($articles as $article)
                       <div class="carousel-item {{$loop->first ? 'active': ''}}">
                         <a href="{{route('article.show', compact('article'))}}">
-                          <img src="{{Storage::url($article->image)}}" class="d-block w-100 height-image" alt="...">
+                          <img src="{{Storage::url($article->image)}}" class="d-block w-50 height-image position-relative" alt="...">
                         </a> 
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption-custom d-none d-md-block">
                           <h5 class="text-dark txt">{{$article->title}}</h5>
                           <p class="small fst-italic text-capitalize text-dark">
                             @foreach ($article->tags as $tag)

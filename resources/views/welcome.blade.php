@@ -31,15 +31,24 @@
                           <img src="{{Storage::url($article->image)}}" class="d-block w-50 height-image position-relative" alt="...">
                         </a> 
                         <div class="carousel-caption-custom d-none d-md-block">
-                          <h5 class="text-dark txt">{{$article->title}}</h5>
+                          <h5 class="display-5 text-dark txt">{{$article->title}}</h5>
                           <p class="small fst-italic text-capitalize text-dark">
                             @foreach ($article->tags as $tag)
                               #{{$tag->name}}                                
                             @endforeach
                           </p>
                           <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-dark text-capitalize">{{$article->category->name}}</a>
-                          <span class="text-dark small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
+                          <span class=" fs-6 text-dark small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
                         </div>
+                        @if(strlen($article->body) <= 50)
+                        <p>
+                          {{$article->body}}
+                        </p>
+                        @else
+                        <p class="text-truncate">
+                          {{$article->body}}
+                        </p>
+                        @endif
                       </div>
                         @endforeach
                     </div>

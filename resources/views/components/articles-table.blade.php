@@ -6,6 +6,7 @@
             <th scope="col">Sottotitolo</th>
             <th scope="col">Redattore</th>
             <th scope="col">Azioni</th>
+            
         </tr>
     </thead>
     <tbody>

@@ -2,7 +2,7 @@
     
     <div class="container-fluid p-5 text-center text-dark" >    
         <div class= "row justify-content-center"> 
-            <h1 class="display-1">
+            <h1 class="display-2">
                 Revisione articoli
             </h1>
         </div>

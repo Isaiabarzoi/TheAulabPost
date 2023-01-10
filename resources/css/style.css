@@ -3,6 +3,8 @@ nav {
     font-family: 'Old Standard TT', serif;
     font-size: 1.2rem; 
     background-color: #B0BDC2;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 h1 {
@@ -35,3 +37,10 @@ table{
     font-family: 'Old Standard TT', serif;
 }
 
+.zoom {
+    transition: transform .2s; /* Animation */
+  }
+  
+.zoom:hover {
+    transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }

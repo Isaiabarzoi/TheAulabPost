@@ -3,7 +3,7 @@
   <div class="container my-5">
     <div class="row border rounded p-2 shadow">
       <div class="col-12">
-        <h1 class="display-1 text-center">Registrati</h1>
+        <h1 class="display-2 text-center">Registrati</h1>
 
         <form method="POST" action="{{route('register')}}">
 

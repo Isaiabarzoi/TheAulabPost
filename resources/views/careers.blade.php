@@ -3,7 +3,7 @@
     <div class="container my-5">
         <div class="row justify-content-center align-content-center border rounded p-2 shadow">
             <div class="col-12 col-md-6">
-                <h1 class="display-1">
+                <h1 class="display-2">
                     Lavora con noi
                 </h1>
                 <h2 class="txt"> Amministratore</h2>

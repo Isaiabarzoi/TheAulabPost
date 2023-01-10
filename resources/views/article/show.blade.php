@@ -7,7 +7,7 @@
 
     <div class="container-fluid p-5 text-center text-dark">
         <div class="row justify-content-center">
-            <h1 class="display-1">
+            <h1 class="display-2">
                 {{$article->title}}
             </h1>
         </div>
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <hr>
-            <p>{{$article->body}}</p>
+            <p class="mt-3 px-5">{{$article->body}}</p>
             <div class="text-center">
                     <input action="action" type="button" value="Torna indietro" class="btn btn-outline-dark my-5" onclick="window.history.go(-1); return false;" />
             </div>

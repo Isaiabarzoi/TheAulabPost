@@ -13,16 +13,17 @@
         @foreach ($articles as $article)
             <div class="col-12 col-md-3 my-2">
                 <div class="card">
-                    <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="">
+                    <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="" height="200">
                     <div class="card-body">
                         <h5 class="card-title">{{$article->title}}</h5>
                         <p class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</p>
+                        <span class="text-muted small fst-italic">Tempo di lettura {{$article->readDuration()}} min</span>
                         <p class="card-text">{{$article->subtitle}}</p>
                         <div class="card-footer text-muted d-flex justify-contentbetween align-items-center">
-                            Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}
+                            Redatto il {{$article->created_at->format('d/m/Y')}} da &nbsp <a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a>
                         </div>
                     </div>
-                    <a href="{{route('article.show', compact('article'))}}" class="btn btn-dark text-white">Leggi</a>
+                    <a href="{{route('article.show', compact('article'))}}" class="btn btn-outline-dark">Leggi</a>
                 </div>
             </div>
         @endforeach

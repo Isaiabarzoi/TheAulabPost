@@ -1,8 +1,10 @@
 <x-layout>
 
-    <div class="container">
-      <div class="row">
+    <div class="container mt-5">
+      <div class="row border rounded p-2 shadow">
         <div class="col-12">
+          <h1 class="display-1 text-center">Inserisci articolo</h1>
+          
           <form method="POST" action="{{route('article.store')}}" enctype="multipart/form-data">
   
             @csrf

@@ -11,7 +11,7 @@
             Ultime Notizie
         </h1>
     </div>
-</div>
+  </div>
     
 
     <div class="container-fluid px-5">
@@ -31,14 +31,14 @@
                           <img src="{{Storage::url($article->image)}}" class="d-block w-100 height-image" alt="...">
                         </a> 
                         <div class="carousel-caption d-none d-md-block">
-                          <h5 class="text-dark">{{$article->title}}</h5>
-                          <p class="small fst-italic text-capitalize">
+                          <h5 class="text-dark txt">{{$article->title}}</h5>
+                          <p class="small fst-italic text-capitalize text-dark">
                             @foreach ($article->tags as $tag)
                               #{{$tag->name}}                                
                             @endforeach
                           </p>
-                          <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted text-capitalize">{{$article->category->name}}</a>
-                          <span class="text-muted small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
+                          <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-dark text-capitalize">{{$article->category->name}}</a>
+                          <span class="text-dark small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
                         </div>
                       </div>
                         @endforeach

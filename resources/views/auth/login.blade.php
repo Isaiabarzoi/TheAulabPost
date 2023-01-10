@@ -1,14 +1,10 @@
 <x-layout>
 
-  <div class="container-fluid p-5 text-center text-dark">
-    <div class="row justify-content-center">
-        <h1 class="display-1">Login</h1>
-    </div>
-  </div>
-
     <div class="container my-5">
-      <div class="row">
+      <div class="row border rounded p-2 shadow">
         <div class="col-12">
+            <h1 class="display-1 text-center">Login</h1>
+    
           <form method="POST" action="{{route('login')}}">
             
             @csrf
@@ -31,9 +27,9 @@
                 <div class="alert alert-danger">{{ $message }}</div>
               @enderror
     
-            <button type="submit" class="btn btn-primary">Accedi</button>
+            <button type="submit" class="btn btn-outline-dark">Accedi</button>
 
-            <p class="small mt-2">Non sei ancora registrato? <a href="{{route('register')}}">Clicca qui</a> </p>
+            <p class="small mt-2">Non sei ancora registrato? <a href="{{route('register')}}" class="text-dark fw-bold">Clicca qui</a> </p>
           </form>
         </div>
       </div>

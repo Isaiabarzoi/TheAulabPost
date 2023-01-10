@@ -1,15 +1,10 @@
 <x-layout>
-    <div class="container-fluid p-5 text-center text-dark">    
-        <div class="row justify-content-center"> 
-            <h1 class="display-1">
-                Modifica articolo
-            </h1>
-        </div>
-    </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-8">
+    <div class="container  mt-5">
+      <div class="row border rounded p-2 shadow">
+        <div class="col-12">
+          <h1 class="display-1 text-center">Modifica articolo</h1>
+
           <form method="POST" action="{{route('article.update',compact('article') )}}" enctype="multipart/form-data">
             
             @csrf

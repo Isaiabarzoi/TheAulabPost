@@ -27,7 +27,7 @@
             <hr>
             <p>{{$article->body}}</p>
             <div class="text-center">
-                    <input action="action" type="button" value="Torna indietro" class="btn btn-white text-dark border my-5" onclick="window.history.go(-1); return false;" />
+                    <input action="action" type="button" value="Torna indietro" class="btn btn-outline-dark my-5" onclick="window.history.go(-1); return false;" />
             </div>
         </div>
     </div>

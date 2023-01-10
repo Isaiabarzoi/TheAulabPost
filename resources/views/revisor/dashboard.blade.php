@@ -3,7 +3,7 @@
     <div class="container-fluid p-5 text-center text-dark" >    
         <div class= "row justify-content-center"> 
             <h1 class="display-1">
-                Bentornato Revisore
+                Revisione articoli
             </h1>
         </div>
     </div>

@@ -29,7 +29,7 @@ h1 {
     text-decoration: none;
   }
   
-  .nav-line::before {
+.nav-line::before {
     content: '';
     position: absolute;
     width: 90%;
@@ -41,14 +41,13 @@ h1 {
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
-  }
+}
   
-  .nav-line:hover::before {
+.nav-line:hover::before {
     transform-origin: left;
     transform: scaleX(1);
-  }
+}
   
-
 table{
     border-radius: 10px;
     overflow: hidden;
@@ -59,11 +58,11 @@ table{
 }
 
 .zoom {
-    transition: transform .2s; /* Animation */
+    transition: transform .2s;
   }
   
 .zoom:hover {
-    transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.02);
   }
 
 /* Carousel */
@@ -73,7 +72,7 @@ table{
     right: 15%;
 }
 
-.height-image {
+.height-image{
     height: 500px;
     border-radius: 10px;
     border-top-right-radius: 0;
@@ -83,9 +82,8 @@ table{
 
 .bg-carousel{
     background-color: #D3E2E8;
-    border-radius: 10px;;
+    border-radius: 10px;
 }
-
 
 @media screen and (max-width:600px){
     .w-50{
@@ -97,4 +95,8 @@ table{
         right: 50%;
         z-index: 2;
     }
+}
+
+.img-cover{
+    object-fit: cover;
 }

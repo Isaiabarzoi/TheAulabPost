@@ -13,7 +13,6 @@
     </div>
   </div>
     
-
     <div class="container-fluid px-5">
         <div class="row">
             <div class="col-12">
@@ -28,7 +27,7 @@
                         @foreach ($articles as $article)
                       <div class="carousel-item {{$loop->first ? 'active': ''}}">
                         <a href="{{route('article.show', compact('article'))}}">
-                          <img src="{{Storage::url($article->image)}}" class="d-block w-50 height-image position-relative" alt="...">
+                          <img src="{{Storage::url($article->image)}}" class="d-block w-50 height-image position-relative img-cover" alt="...">
                         </a> 
                         <div class="carousel-caption-custom d-none d-md-block">
                           <h5 class="display-5 text-dark txt">{{$article->title}}</h5>
@@ -39,7 +38,7 @@
                           </p>
                           <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-dark text-capitalize">{{$article->category->name}}</a>
                           <span class=" fs-6 text-dark small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
-                          @if(strlen($article->body) <= 50)
+                          {{-- @if(strlen($article->body) <= 150)
                           <p>
                             {{$article->body}}
                           </p>
@@ -47,7 +46,7 @@
                           <p class="text-truncate">
                             {{$article->body}}
                           </p>
-                          @endif
+                          @endif --}}
                         </div>
                       </div>
                         @endforeach

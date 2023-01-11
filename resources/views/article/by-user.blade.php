@@ -13,7 +13,7 @@
             @foreach ($articles as $article)
                 <div class="col-12 col-md-3 my-2">
                     <div class="card zoom">
-                        <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="" height="200">
+                        <img src="{{Storage::url($article->image)}}" class="card-img-top img-cover" alt="" height="200">
                         <div class="card-body">
                             <h5 class="card-title">{{$article->title}}</h5>
                             @if($article->category)

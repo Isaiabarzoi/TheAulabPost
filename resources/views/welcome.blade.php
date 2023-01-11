@@ -16,7 +16,7 @@
     <div class="container-fluid px-5">
         <div class="row">
             <div class="col-12">
-                <div id="carouselExampleCaptions" class="carousel slide">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -25,7 +25,7 @@
                     </div>
                     <div class="carousel-inner bg-carousel">
                         @foreach ($articles as $article)
-                      <div class="carousel-item {{$loop->first ? 'active': ''}}">
+                      <div class="carousel-item {{$loop->first ? 'active': ''}}" data-bs-interval="5000">
                         <a href="{{route('article.show', compact('article'))}}">
                           <img src="{{Storage::url($article->image)}}" class="d-block w-50 height-image" alt="...">
                         </a> 

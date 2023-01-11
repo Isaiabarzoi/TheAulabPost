@@ -1,4 +1,4 @@
-<footer class="bg-light text-center text-white mt-5">
+<footer class="text-center text-white mt-5" style="background-color:#D3E2E8;">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->
@@ -53,9 +53,9 @@
     <!-- Grid container -->
   
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color:#D3E2E8;">
+    <div class="text-center text-dark p-3 bg-light">
       © 2023 Copyright:
-      <a class="text-white" href="">Ghost Code</a>
+      <a class="text-dark" href="">Ghost Code</a>
     </div>
     <!-- Copyright -->
   </footer>

@@ -6,12 +6,10 @@
         </div>
    @endif
    <div class="container-fluid p-5 text-center text-dark" >    
-    <div class= "row justify-content-center line position-relative"> 
-      <div class="txt-line-l"></div>
+    <div class= "row justify-content-center position-relative"> 
         <h1 class="display-3">
             Ultimi articoli
         </h1>
-        <div class="txt-line-r"></div>
     </div>
   </div>
     
@@ -69,25 +67,50 @@
         <div class="text-center">
           <h2 class="txt">Categorie in evidenza</h2>
         </div>
-         
-              <div class="bg-danger col icon-home">
-                <i class="fa-sharp fa-solid fa-sportsball"></i>
+              <div class="col icon-home m-1 mt-4">
+                <a href="{{route('article.byCategory', \app\Models\Category::where('name', 'sport')->first())}}" class="icon-color">
+                  <i class="fa-solid fa-football fa-7x"></i>
+                  <h4 class="mt-1">Sport</h4>
+                </a>
               </div>
-              <div class="bg-info col icon-home">
-                <i class="fa-sharp fa-solid fa-plate-utensils"></i>
+              <div class="col icon-home m-2 mt-4">
+                <a href="{{route('article.byCategory', \app\Models\Category::where('name', 'gastronomia')->first())}}" class="icon-color">
+                  <i class="fa-solid fa-utensils fa-7x"></i>
+                  <h4 class="mt-1">Gastronomia</h4>
+                </a>
               </div>
-              <div class="bg-warning col text-center icon-home">
-                <i class="fa-sharp fa-solid fa-landmark-dome"></i>
+              <div class="col text-center icon-home m-2 mt-4">
+                <a href="{{route('article.byCategory', \app\Models\Category::where('name', 'politica')->first())}}" class="icon-color">
+                  <i class="fa-sharp fa-solid fa-landmark-dome fa-7x"></i>
+                  <h4 class="mt-1">Politica</h4>
+                </a>
               </div>
-              <div class="bg-dark col icon-home">
-                <i class="fa-sharp fa-solid fa-laptop-mobile"></i>
+              <div class="col icon-home m-2 mt-4">
+                <a href="{{route('article.byCategory', \app\Models\Category::where('name', 'tech')->first())}}" class="icon-color">
+                  <i class="fa-solid fa-microchip fa-7x"></i>
+                  <h4 class="mt-1">Tech</h4>
+                </a>
               </div>
-              <div class="bg-success col icon-home">
-                <i class="fa-sharp fa-solid fa-camera-movie"></i>
+              <div class="col icon-home m-2 mt-4">
+                <a href="{{route('article.byCategory', \app\Models\Category::where('name', 'cinema')->first())}}" class="icon-color">
+                  <i class="fa-solid fa-film fa-7x"></i>
+                  <h4 class="mt-1">Cinema</h4>
+                </a>
               </div>
-              <div class="bg-secondary col icon-home">
-                <i class="fa-sharp fa-solid fa-chart-line-up"></i>
+              <div class="col icon-home m-2 mt-4">
+                <a href="{{route('article.byCategory', \app\Models\Category::where('name', 'economia')->first())}}" class="icon-color">
+                  <i class="fa-solid fa-chart-line fa-7x"></i>
+                  <h4 class="mt-1">Economia</h4>
+                </a>
               </div>         
+      </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="bg-image">
+          <h2 class="txt">Sostenibilità e ambiente</h2>
+        </div>
       </div>
     </div>
     

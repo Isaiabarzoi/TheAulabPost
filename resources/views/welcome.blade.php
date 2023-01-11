@@ -6,10 +6,12 @@
         </div>
    @endif
    <div class="container-fluid p-5 text-center text-dark" >    
-    <div class= "row justify-content-center"> 
-        <h1 class="display-2">
-            Ultime Notizie
+    <div class= "row justify-content-center line position-relative"> 
+      <div class="txt-line-l"></div>
+        <h1 class="display-3">
+            Ultimi articoli
         </h1>
+        <div class="txt-line-r"></div>
     </div>
   </div>
     
@@ -23,11 +25,11 @@
                       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
                     </div>
-                    <div class="carousel-inner position-relative bg-carousel">
+                    <div class="carousel-inner bg-carousel">
                         @foreach ($articles as $article)
                       <div class="carousel-item {{$loop->first ? 'active': ''}}">
                         <a href="{{route('article.show', compact('article'))}}">
-                          <img src="{{Storage::url($article->image)}}" class="d-block w-50 height-image position-relative img-cover" alt="...">
+                          <img src="{{Storage::url($article->image)}}" class="d-block w-50 height-image" alt="...">
                         </a> 
                         <div class="carousel-caption-custom d-none d-md-block">
                           <h5 class="display-5 text-dark txt">{{$article->title}}</h5>
@@ -61,7 +63,32 @@
             </div>
         </div>
     </div>
-    
-      
+
+    <div class="container-fluid px-5 mt-5">
+      <div class="row">
+        <div class="text-center">
+          <h2 class="txt">Categorie in evidenza</h2>
+        </div>
+         
+              <div class="bg-danger col icon-home">
+                <i class="fa-sharp fa-solid fa-sportsball"></i>
+              </div>
+              <div class="bg-info col icon-home">
+                <i class="fa-sharp fa-solid fa-plate-utensils"></i>
+              </div>
+              <div class="bg-warning col text-center icon-home">
+                <i class="fa-sharp fa-solid fa-landmark-dome"></i>
+              </div>
+              <div class="bg-dark col icon-home">
+                <i class="fa-sharp fa-solid fa-laptop-mobile"></i>
+              </div>
+              <div class="bg-success col icon-home">
+                <i class="fa-sharp fa-solid fa-camera-movie"></i>
+              </div>
+              <div class="bg-secondary col icon-home">
+                <i class="fa-sharp fa-solid fa-chart-line-up"></i>
+              </div>         
+      </div>
+    </div>
     
 </x-layout>

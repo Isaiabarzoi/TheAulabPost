@@ -107,9 +107,16 @@
     </div>
 
     <div class="container-fluid mt-5">
-      <div class="row">
-        <div class="bg-image">
-          <h2 class="txt">Sostenibilità e ambiente</h2>
+      <div class="row div-size">
+        <div class="d-flex" id="bg-image">
+          <div class="col-10 mt-4">
+            <h2 class="txt text-white">Sostenibilità e ambiente</h2>
+          </div>
+          <div class="col-2 mt-4">
+            <a href="{{route('article.byCategory', \app\Models\Category::where('name', 'sostenibilità e ambiente')->first())}}">
+              <button class="btn btn-trasparent text-white fw-bold border border-white border-4 rounded-pill">Salviamo l'ambiente</button>
+            </a>
+          </div>
         </div>
       </div>
     </div>

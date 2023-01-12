@@ -6,7 +6,7 @@
         </div>
    @endif
 
-   <div class="container-fluid p-5 text-center text-dark">
+<div class="container-fluid p-5 text-center text-dark">
     <div class="row justify-content-center position-relative">
         <div class="col-6 d-flex">
           <div class="bg-dark line"></div>
@@ -17,7 +17,7 @@
           <div class="bg-dark line"></div>     
     </div>
   </div>
-   </div>
+   </div> 
 
 
 
@@ -139,6 +139,31 @@
             </div> --}}
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <h3 class="mt-5">Il nostro team</h3>
+    </div>  
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 text-center">
+      <div class="col">
+        <a href="https://www.linkedin.com/in/stefano-valcarossa/" class="team-link text-dark">
+          <img class="rounded-circle shadow zoom" alt="avatar1" src="/homeImage/stefano-valcarossa.jpg"/>
+          <h4 class="mt-2">Stefano</h4>
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://www.linkedin.com/in/giorgio-di-giambattista-full-stack-developer-junior-fpv-drone-pilot/" class="team-link text-dark">
+          <img class="rounded-circle shadow zoom" alt="avatar2" src="/homeImage/giorgio.jpg"/>
+          <h4 class="mt-2">Giorgio</h4>
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://www.linkedin.com/in/isaia-barzoi-13469a25a/" class="team-link text-dark">
+          <img class="rounded-circle shadow zoom" alt="avatar3" src="/homeImage/isaia.jpeg"/>
+          <h4 class="mt-2">Isaia</h4>
+        </a>
       </div>
     </div>
     

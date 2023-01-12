@@ -107,6 +107,11 @@ table{
     color: #71757a!important;
 }
 
+.category-margin{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
 .div-size{
     height: 500px;
 }
@@ -114,7 +119,7 @@ table{
 #bg-image{
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.3) 60%), url('/public/homeImage/p0836dcl.jpeg');
     background-size: cover;
-    background-position: center;    
+    background-position: center;  
 }
 
 .btn:hover{
@@ -134,6 +139,20 @@ table{
 
 .title-div{
     width: 1000px;
+}
+
+.team-link{
+    text-decoration: none;
+}
+
+.rounded-circle{
+    width: 225px;
+    height: 225px;
+    object-fit: cover;
+}
+
+.rounded-circle:hover{
+    
 }
 
 @media screen and (max-width:600px){

@@ -6,7 +6,7 @@
         <!-- Facebook -->
         <a class="btn text-white btn-floating m-1"
           style="background-color: #3b5998;"
-          href="#!"
+          href="https://it-it.facebook.com/"
           role="button">
             <i class="fab fa-facebook-f">
             </i> 
@@ -15,7 +15,7 @@
         <!-- Twitter -->
         <a class="btn text-white btn-floating m-1"
           style="background-color: #55acee;"
-          href="#!"
+          href="https://twitter.com/"
           role="button"> 
             <i class="fab fa-twitter">
             </i>
@@ -24,7 +24,7 @@
         <!-- Google -->
         <a class="btn text-white btn-floating m-1"
           style="background-color: #dd4b39;"
-          href="#!"
+          href="https://www.google.it/"
           role="button">
           <i class="fab fa-google">
           </i>
@@ -33,7 +33,7 @@
         <!-- Instagram -->
         <a class="btn text-white btn-floating m-1"
           style="background-color: #ac2bac;"
-          href="#!"
+          href="https://www.instagram.com/"
           role="button">
            <i class="fab fa-instagram"> 
            </i>
@@ -42,7 +42,7 @@
         <!-- Linkedin -->
         <a class="btn text-white btn-floating m-1"
           style="background-color: #0082ca;"
-          href="#!"
+          href="https://it.linkedin.com/"
           role="button"> 
           <i class="fab fa-linkedin-in">
           </i>

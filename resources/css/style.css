@@ -114,7 +114,7 @@ table{
 #bg-image{
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.3) 60%), url('/public/homeImage/p0836dcl.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center;    
 }
 
 .btn:hover{
@@ -122,14 +122,19 @@ table{
     background-color: aliceblue;
 }
 
+.img-size{
+    width: 350px;
+}
 
+.line{
+    height: 5px;
+    width: 50px;
+    margin-top: 25px;
+}
 
-
-
-
-
-
-
+.title-div{
+    width: 1000px;
+}
 
 @media screen and (max-width:600px){
     .w-50{

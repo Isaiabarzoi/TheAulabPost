@@ -6,31 +6,16 @@
         </div>
    @endif
 
-<div class="container-fluid p-5 text-center text-dark">
-    <div class="row justify-content-center position-relative">
-        <div class="col-6 d-flex">
-          <div class="bg-dark line"></div>
-          <div class="title-div">
-            <h1 class="display-3">
-              Ultimi articoli</h1>
-          </div>
-          <div class="bg-dark line"></div>     
-    </div>
-  </div>
-   </div> 
 
-
-
-
-
-
-   {{-- <div class="container-fluid p-5 text-center text-dark" >    
+    <div class="container-fluid p-5 text-center text-dark" >    
     <div class= "row justify-content-center position-relative"> 
-        <h1 class="display-3">
+      {{-- <hr class="line"> --}}
+        <h1 class="display-3 line">
             Ultimi articoli
         </h1>
+        <hr class="line">
     </div>
-  </div> --}}
+  </div> 
     
     <div class="container-fluid px-5">
         <div class="row">
@@ -48,7 +33,7 @@
                         <a href="{{route('article.show', compact('article'))}}">
                           <img src="{{Storage::url($article->image)}}" class="d-block w-50 height-image" alt="...">
                         </a> 
-                        <div class="carousel-caption-custom d-none d-md-block">
+                        <div class="carousel-caption-custom d-none d-md-block w-image">
                           <h5 class="display-5 text-dark txt">{{$article->title}}</h5>
                           <p class="small fst-italic text-capitalize text-dark">
                             @foreach ($article->tags as $tag)
@@ -118,7 +103,7 @@
 
     <div class="container-fluid mt-5">
       <div class="row div-size" id="bg-image">
-        <div class="d-flex" >
+        {{-- <div class="d-flex" > --}}
           <div class="col-10 mt-4">
             <h2 class="txt text-white">Sostenibilità e ambiente</h2>
           </div>
@@ -128,17 +113,17 @@
             </a>
           </div>
           <div class="d-flex justify-content-center">
-            {{-- <div class="bg-warning">
-              <img src="/homeImage/pexels-lucien-wanda-2827735.jpg" class="img-size" alt="">
+            <div class="mx-5 ">
+              <img src="/homeImage/pexels-lucien-wanda-2827735.jpg" class="img-size shadow-img" alt="">
             </div>
-            <div>
-              <img src="/homeImage/pexels-pixabay-51951.jpg" class="img-size" alt="">
+            <div class="mx-5">
+              <img src="/homeImage/pexels-pixabay-51951.jpg" class="img-size shadow-img" alt="">
             </div>
-            <div>
-              <img src="/homeImage/pexels-ron-lach-9543414.jpg" class="img-size" alt="">
-            </div> --}}
+            <div class="mx-5">
+              <img src="/homeImage/pexels-ron-lach-9543414.jpg" class="img-size shadow-img" alt="">
+            </div>
           </div>
-        </div>
+        {{-- </div> --}}
       </div>
     </div>
 

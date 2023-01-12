@@ -131,14 +131,13 @@ table{
     width: 350px;
 }
 
-.line{
-    height: 5px;
-    width: 50px;
-    margin-top: 25px;
-}
 
 .title-div{
     width: 1000px;
+}
+
+.shadow-img {
+    box-shadow: 0 .250rem .50rem #E7E6DD, 0 .250rem .50rem #E7E6DD;
 }
 
 .team-link{
@@ -151,8 +150,8 @@ table{
     object-fit: cover;
 }
 
-.rounded-circle:hover{
-    
+.w-image {
+    width: 30%;
 }
 
 @media screen and (max-width:600px){

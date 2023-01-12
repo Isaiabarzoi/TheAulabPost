@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        $categories = ['politica' , 'economia' , 'gastronomia' , 'sport' , 'intrattenimento' , 'tech'];
+        $categories = ['politica' , 'economia' , 'gastronomia' , 'sport' , 'intrattenimento' , 'tech', 'sostenibilità e ambiente', 'cinema'];
 
         foreach ($categories as $category) {
             Category::create([

@@ -103,6 +103,8 @@
       </div>
     </div>
 
+    {{-- Ambiente --}}
+
     <div class="container-fluid mt-5">
       <div class="row div-size" id="bg-image">
         {{-- <div class="d-flex" > --}}
@@ -125,9 +127,10 @@
               <img src="/homeImage/pexels-ron-lach-9543414.jpg" class="img-size shadow-img zoom" alt="">
             </div>
           </div>
-        {{-- </div> --}}
       </div>
     </div>
+
+    {{-- team --}}
 
     <div class="text-center">
       <h3 class="mt-5">Il nostro team</h3>
@@ -154,4 +157,21 @@
       </div>
     </div>
     
+    {{-- lavora con noi --}}
+    <div class="container-fluid mt-5">
+      <div class="row" id="bg-work">
+          <div class="col-2 mt-4">
+            <a href="{{route('careers')}}">
+              <button class="btn btn-trasparent text-white fw-bold border border-white border-4 rounded-pill">Lavora con noi</button>
+            </a>
+          </div>
+      </div>
+    </div>
+
+    {{-- scroll to top btn --}}
+
+    <button type="button" class="btn btn-floating btn-lg btn_color mx-3" id="btn-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
 </x-layout>

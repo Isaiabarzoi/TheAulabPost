@@ -72,4 +72,8 @@
         </div>
     </div>
 
+ <button type="button" class="btn btn-floating btn-lg btn_color mx-3" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      
 </x-layout>

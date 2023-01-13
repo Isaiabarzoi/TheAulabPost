@@ -11,8 +11,6 @@
           <li class="nav-item">
             @auth
             <a class="nav-link active nav-line" aria-current="page" href="{{route('article.create')}}">Inserisci articolo</a>          
-            {{-- @else
-            <a class="nav-link active" aria-current="page" href="{{route('login')}}">Inserisci articolo</a> --}}
             @endauth
           </li>
           <li class="nav-item">

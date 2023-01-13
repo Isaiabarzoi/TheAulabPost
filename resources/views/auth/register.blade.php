@@ -1,5 +1,5 @@
 <x-layout>
-
+  
   <div class="container my-5">
     <div class="row border rounded p-2 shadow">
       <div class="col-12">

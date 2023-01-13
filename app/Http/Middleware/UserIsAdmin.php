@@ -20,6 +20,6 @@ class UserIsAdmin
         if (Auth::user() && Auth::user()->is_admin) {
             return $next($request);
         }
-        return redirect (route('home')) -> with ('message', 'Non sei autorizzato');
+        return redirect (route('home')) -> with ('message', 'Spiacente, non sei autorizzato');
     }
 }

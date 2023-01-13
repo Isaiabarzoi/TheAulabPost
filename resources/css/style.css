@@ -181,6 +181,7 @@ table{
     height: 700px;
     background-size: cover;
     background-position: center;
+    
 }
 
 
@@ -211,5 +212,16 @@ table{
         top: 0px;
         right: 50%;
         z-index: 2;
+    }
+
+    #bg-work {
+        height: auto;
+        max-width: 100%;
+        background-size: cover;
+    }
+
+    #bg-image {
+        height: auto;
+        max-width: 100%;
     }
 }

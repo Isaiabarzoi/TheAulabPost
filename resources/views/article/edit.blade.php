@@ -11,7 +11,7 @@
             @method('PUT')
             <div class="mb-3">
               <label for="title" class="form-label">Titolo</label>
-              <input name="title" type="text" class="form-control" @error('title') is-invalid @enderror id="title" value="{{$article->title}}">
+              <input name="title" type="text" class="rounded-pill form-control" @error('title') is-invalid @enderror id="title" value="{{$article->title}}">
     
               @error('title')
                  <div class="alert alert-danger">{{$message}}</div>
@@ -20,7 +20,7 @@
             </div>
             <div>
                 <label for="subtitle" class="form-label">Sottotitolo</label>
-                <input name="subtitle" type="text" class="form-control" @error('subtitle') is-invalid @enderror id="subtitle" value="{{$article->subtitle}}">
+                <input name="subtitle" type="text" class="rounded-pill form-control" @error('subtitle') is-invalid @enderror id="subtitle" value="{{$article->subtitle}}">
               </div>
     
               @error('subtitle')
@@ -29,7 +29,7 @@
     
             <div class="mb-3">
               <label for="image" class="form-label">Immagine</label>
-              <input name="image" type="file" class="form-control" @error('image') is-invalid @enderror id="image">
+              <input name="image" type="file" class="rounded-pill form-control" @error('image') is-invalid @enderror id="image">
             </div>
     
               @error('image')
@@ -38,7 +38,7 @@
     
             <div class="mb-3">
                 <label for="category" class="form-label">Categoria:</label>
-                <select name="category" class="form-control text-capitalize" @error('category') is-invalid @enderror id="category">
+                <select name="category" class=" rounded-pill form-control text-capitalize" @error('category') is-invalid @enderror id="category">
                     @foreach ($categories as $category)
                         <option value="{{$category->id}}" @if($article->category && $category->id == $article->category->id) selected @endif>{{$category->name}}</option>
                     @endforeach
@@ -51,7 +51,7 @@
     
             <div class="mb-3">
                 <label for="body" class="form-lable">Corpo del testo</label>
-                <textarea name="body" id="body" cols="30" rows="7" class="form-control" @error('body') is-invalid @enderror>{{$article->body}}</textarea>
+                <textarea name="body" id="body" cols="30" rows="7" class="rounded-4 form-control" @error('body') is-invalid @enderror>{{$article->body}}</textarea>
             </div>
 
             @error('body')
@@ -60,7 +60,7 @@
 
             <div class="mb-3">
               <label for="tags" class="form-label">Tags</label>
-              <input name="tags" id="tags" class="form-control" placeholder="Dividi ogni tag con una virgola" value="{{$article->tags->implode('name', ', ')}}" @error('tags') is-invalid @enderror>
+              <input name="tags" id="tags" class="rounded-pill form-control" placeholder="Dividi ogni tag con una virgola" value="{{$article->tags->implode('name', ', ')}}" @error('tags') is-invalid @enderror>
             </div>
 
             @error('tags')
@@ -68,7 +68,7 @@
             @enderror
             
             <div class="mt-2">
-                <button class="btn btn-dark text-white">Modifica articolo</button>
+                <button class="btn btn-dark text-white rounded-pill">Modifica articolo</button>
                 <a class="btn btn-outline-dark" href="{{route('home')}}">Torna alla home</a>
             </div>
           </form>

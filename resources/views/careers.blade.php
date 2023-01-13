@@ -31,7 +31,7 @@
 
                     <div class="mb-3">
                         <label class= "form-label" for="role">Per quale ruolo ti stai candidando? </label>
-                        <select class="form-controller" name="role" id="role">
+                        <select class="rounded-pill form-select" name="role" id="role">
                             <option value="">Scegli qui</option>
                             <option value="admin">Amministratore</option>
                             <option value="revisor"> Revisore</option>
@@ -40,14 +40,14 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="email"> Email</label>
-                        <input name="email" type="email" class="form-control" id="email" value="{{old('email') ?? Auth::user()->email}}"> 
+                        <input name="email" type="email" class="rounded-pill form-control" id="email" value="{{old('email') ?? Auth::user()->email}}"> 
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="message"> Parlaci di te</label>
-                        <textarea name="message" class="form-control" id="message" cols="30" rows="7"> {{old('message')}} </textarea> 
+                        <textarea name="message" class="rounded-4 form-control" id="message" cols="30" rows="7"> {{old('message')}} </textarea> 
                     </div>
                     <div class="mt-2">
-                        <button class="btn btn-dark text-white border">
+                        <button class="btn btn-dark text-white border rounded-pill">
                             Invia la candidatura
                         </button>
                     </div>

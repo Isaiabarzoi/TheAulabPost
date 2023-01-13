@@ -5,6 +5,7 @@
             <h1 class="display-2">
                 I miei articoli
             </h1>
+            <hr>
         </div>
     </div>
 

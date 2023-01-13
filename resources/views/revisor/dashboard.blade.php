@@ -5,6 +5,7 @@
             <h1 class="display-2">
                 Revisione articoli
             </h1>
+            <hr>
         </div>
     </div>
 

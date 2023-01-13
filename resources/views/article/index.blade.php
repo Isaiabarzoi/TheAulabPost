@@ -5,6 +5,7 @@
             <h1 class="display-2">
                 Tutti gli articoli
             </h1>
+            <hr>
         </div>
     </div>
 
@@ -29,7 +30,7 @@
                                 @endforeach
                             </p>
                             <div class="card-footer text-muted d-flex justify-contentbetween align-items-center text-truncate">
-                                Redatto il {{$article->created_at->format('d/m/Y')}} da &nbsp <a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a>
+                                Redatto il {{$article->created_at->format('d/m/Y')}} da &nbsp <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class="text-decoration-none text-secondary">{{$article->user->name}}</a>
                             </div>
                         </div>
                         <a href="{{route('article.show', compact('article'))}}" class="btn btn-outline-dark">Leggi</a>

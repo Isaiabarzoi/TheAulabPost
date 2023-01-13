@@ -5,6 +5,7 @@
             <h1 class="display-2">
                 Redattore {{$user->name}}
             </h1>
+            <hr>
         </div>
     </div>
     

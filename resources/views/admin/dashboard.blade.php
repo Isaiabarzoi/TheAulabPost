@@ -5,6 +5,7 @@
             <h1 class="display-1">
                 Gestione utenti
             </h1>
+            <hr>
         </div>
     </div>
 
@@ -39,12 +40,13 @@
         </div>
     </div>
 
-    <hr>
+    
     <div class="container-fluid p-5 text-center text-dark" >    
         <div class= "row justify-content-center"> 
             <h1 class="display-1">
                 Gestione tags e categorie
             </h1>
+            <hr>
         </div>
     </div>
     <div class="container my-5">

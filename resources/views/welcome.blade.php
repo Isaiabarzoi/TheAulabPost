@@ -13,7 +13,7 @@
         <h1 class="display-3 line">
             Ultimi articoli
         </h1>
-        <hr class="line">
+        <hr>
     </div>
   </div> 
     
@@ -34,7 +34,9 @@
                           <img src="{{Storage::url($article->image)}}" class="d-block w-50 height-image" alt="...">
                         </a> 
                         <div class="carousel-caption-custom d-none d-md-block w-image">
-                          <h5 class="display-5 text-dark txt">{{$article->title}}</h5>
+                          <a href="{{route('article.show', compact('article'))}}" class="text-decoration-none">
+                            <h5 class="display-5 text-dark txt">{{$article->title}}</h5>
+                          </a>
                           <p class="small fst-italic text-capitalize text-dark">
                             @foreach ($article->tags as $tag)
                               #{{$tag->name}}                                
@@ -114,13 +116,13 @@
           </div>
           <div class="d-flex justify-content-center">
             <div class="mx-5 ">
-              <img src="/homeImage/pexels-lucien-wanda-2827735.jpg" class="img-size shadow-img" alt="">
+              <img src="/homeImage/pexels-lucien-wanda-2827735.jpg" class="img-size shadow-img zoom" alt="">
             </div>
             <div class="mx-5">
-              <img src="/homeImage/pexels-pixabay-51951.jpg" class="img-size shadow-img" alt="">
+              <img src="/homeImage/pexels-pixabay-51951.jpg" class="img-size shadow-img zoom" alt="">
             </div>
             <div class="mx-5">
-              <img src="/homeImage/pexels-ron-lach-9543414.jpg" class="img-size shadow-img" alt="">
+              <img src="/homeImage/pexels-ron-lach-9543414.jpg" class="img-size shadow-img zoom" alt="">
             </div>
           </div>
         {{-- </div> --}}

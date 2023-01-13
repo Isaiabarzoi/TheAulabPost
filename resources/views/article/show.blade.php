@@ -10,6 +10,7 @@
             <h1 class="display-2">
                 {{$article->title}}
             </h1>
+            <hr>
         </div>
     </div>
 

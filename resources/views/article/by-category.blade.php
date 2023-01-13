@@ -5,6 +5,7 @@
         <h1 class="display-2">
             Categoria {{$category->name}}
         </h1>
+        <hr>
     </div>
 </div>
 

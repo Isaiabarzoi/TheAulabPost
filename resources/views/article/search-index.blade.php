@@ -5,6 +5,7 @@
             <h1 class="display-2">
                 Risultati ricerca: {{$query ?? 'Nessun risultato'}}
             </h1>
+            <hr>
         </div>
     </div>
 

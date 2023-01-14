@@ -40,6 +40,10 @@
         </div>
     </div>
 
+    
+     <span class="col-12 justify-content-end">{{$articles->links('components.paginator')}}</span>
+    
+
    <!-- Back to top button -->
 <button type="button" class="btn btn-floating btn-lg btn_color mx-3" id="btn-back-to-top">
     <i class="fas fa-arrow-up"></i>

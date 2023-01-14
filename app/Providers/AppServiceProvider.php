@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Tag;
 use App\Models\Category;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
@@ -36,5 +37,11 @@ class AppServiceProvider extends ServiceProvider
             $tags = Tag::all();
             View::share(['tags' => $tags]);
         }
+
+        Paginator::useBootstrapFive();
+
+        Paginator::defaultView('components.paginator');
+
     }
+
 }

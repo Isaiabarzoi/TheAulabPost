@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
+
+
 class ArticleController extends Controller
 {
     /**
@@ -20,7 +22,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
+
         $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+        $articles = Article::paginate(12);
         return view('article.index', compact('articles'));
     }
 

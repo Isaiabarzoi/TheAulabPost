@@ -1,8 +1,8 @@
 <x-layout>
   
-  <div class="container  w-50 my-5">
-    <div class="row border rounded p-2 shadow">
-      <div class="col-12">
+  <div class="container-fluid my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 border rounded p-4 shadow container-img">
         <h1 class="display-2 text-center"> Benvenuto, Registrati </h1>
 
         <form method="POST" action="{{route('register')}}">
@@ -45,7 +45,7 @@
               <div class="alert alert-danger">{{ $message }}</div>
             @enderror
   
-          <button type="submit" class="btn btn-outline-dark rounded-pill">Submit</button>
+          <button type="submit" class="btn btn-outline-dark fw-bold rounded-pill">Registrati</button>
           <p class="small mt-2">Già registrato? <a href="{{route('login')}}" class="text-dark fw-bold">Clicca qui</a> </p>
         </form>
       </div>

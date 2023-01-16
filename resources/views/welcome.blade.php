@@ -69,9 +69,10 @@
   
     <div class="container-fluid px-5 mt-5">
       <div class="row">
-        <div class="text-center">
+        <div class="text-center col-12">
           <h2 class="txt">Categorie in evidenza</h2>
         </div>
+        <div class="row">
               <div class="col icon-home m-1 mt-4">
                 <a href="{{route('article.byCategory', \app\Models\Category::where('name', 'sport')->first())}}" class="icon-color">
                   <i class="fa-solid fa-football fa-7x"></i>
@@ -107,88 +108,78 @@
                   <i class="fa-solid fa-chart-line fa-7x"></i>
                   <h4 class="mt-1">Economia</h4>
                 </a>
-              </div>         
+              </div>
+        </div>         
       </div>
     </div>
 
     {{-- Ambiente --}}
 
-    <div class="container-fluid mt-5">
-      <div class="row div-size" id="bg-image">
-        {{-- <div class="d-flex" > --}}
-          <div class="col-10 mt-4">
+    <div class="container-fluid mt-5 p-0">
+      <div class="row justify-content-between p-0 m-0" id="bg-image">
+          <div class="col-6 mt-4 h-div">
             <h2 class="txt text-white">Sostenibilità e ambiente</h2>
           </div>
-          <div class="col-2 mt-4">
+          <div class="col-6 mt-4 d-flex justify-content-end h-div">
             <a href="{{route('article.byCategory', \app\Models\Category::where('name', 'sostenibilità e ambiente')->first())}}">
               <button class="btn btn_color_3 text-white fw-bold border border-white border-4 rounded-pill">Salviamo l'ambiente</button>
             </a>
           </div>
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="/homeImage/pexels-lucien-wanda-2827735.jpg" class="img-size shadow-img zoom" alt="">
-                <h5 class="text-white mt-3">La plastica sta distruggendo il pianeta</h5>
-              </div>
-              <div class="carousel-item">
-                <img src="/homeImage/pexels-pixabay-51951.jpg" class="img-size shadow-img zoom" alt="">
-                <h5 class="text-white mt-3 text-wrap">Il riscaldamento globale causa incendi</h5>
-              </div>
-              <div class="carousel-item">
-                <img src="/homeImage/pexels-ron-lach-9543414.jpg" class="img-size shadow-img zoom" alt="">
-                <h5 class="text-white mt-3 text-wrap">Aiutiamoci e possiamo ancora salvarci</h5>
+
+          <div class="mx-auto col-12 col-md-5">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active hw-image">
+                  <img src="/homeImage/pexels-lucien-wanda-2827735.jpg" class="img-size shadow-img zoom" alt="">
+                  <h5 class="text-white mt-3">La plastica sta distruggendo il pianeta</h5>
+                </div>
+                <div class="carousel-item hw-image">
+                  <img src="/homeImage/pexels-pixabay-51951.jpg" class="img-size shadow-img zoom" alt="">
+                  <h5 class="text-white mt-3 text-wrap">Il riscaldamento globale causa incendi</h5>
+                </div>
+                <div class="carousel-item hw-image">
+                  <img src="/homeImage/pexels-ron-lach-9543414.jpg" class="img-size shadow-img zoom" alt="">
+                  <h5 class="text-white mt-3 text-wrap">Aiutiamoci e possiamo ancora salvarci</h5>
+                </div>
               </div>
             </div>
-          </div>
-          
-          {{-- <div class="d-flex justify-content-center">
-            <div class="mx-5">
-              <img src="/homeImage/pexels-lucien-wanda-2827735.jpg" class="img-size shadow-img zoom" alt="">
-              <h5 class="text-white mt-3">La plastica sta distruggendo il pianeta</h5>
-            </div>
-            <div class="mx-5">
-              <img src="/homeImage/pexels-pixabay-51951.jpg" class="img-size shadow-img zoom" alt="">
-              <h5 class="text-white mt-3 text-wrap">Il riscaldamento globale causa incendi</h5>
-            </div>
-            <div class="mx-5">
-              <img src="/homeImage/pexels-ron-lach-9543414.jpg" class="img-size shadow-img zoom" alt="">
-              <h5 class="text-white mt-3 text-wrap">Aiutiamoci e possiamo ancora salvarci</h5>
-            </div> --}}
           </div>
       </div>
     </div>
+  </div>
 
     {{-- team --}}
 
     <div class="text-center">
       <h3 class="mt-5">Il nostro team</h3>
     </div>  
-
-    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 text-center">
-      <div class="col">
-        <a href="https://www.linkedin.com/in/stefano-valcarossa/" class="team-link text-dark">
-          <img class="rounded-circle shadow zoom" alt="avatar1" src="/homeImage/stefano-valcarossa.jpg"/>
-          <h4 class="mt-2">Stefano</h4>
-        </a>
-      </div>
-      <div class="col">
-        <a href="https://www.linkedin.com/in/giorgio-di-giambattista-full-stack-developer-junior-fpv-drone-pilot/" class="team-link text-dark">
-          <img class="rounded-circle shadow zoom" alt="avatar2" src="/homeImage/giorgio.jpg"/>
-          <h4 class="mt-2">Giorgio</h4>
-        </a>
-      </div>
-      <div class="col">
-        <a href="https://www.linkedin.com/in/isaia-barzoi-13469a25a/" class="team-link text-dark">
-          <img class="rounded-circle shadow zoom" alt="avatar3" src="/homeImage/isaia.jpeg"/>
-          <h4 class="mt-2">Isaia</h4>
-        </a>
+    <div class="container-fluid mt-5">
+      <div class="row text-center">
+        <div class="col">
+          <a href="https://www.linkedin.com/in/stefano-valcarossa/" class="team-link text-dark">
+            <img class="rounded-circle shadow zoom" alt="avatar1" src="/homeImage/stefano-valcarossa.jpg"/>
+            <h4 class="mt-2">Stefano</h4>
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://www.linkedin.com/in/giorgio-di-giambattista-full-stack-developer-junior-fpv-drone-pilot/" class="team-link text-dark">
+            <img class="rounded-circle shadow zoom" alt="avatar2" src="/homeImage/giorgio.jpg"/>
+            <h4 class="mt-2">Giorgio</h4>
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://www.linkedin.com/in/isaia-barzoi-13469a25a/" class="team-link text-dark">
+            <img class="rounded-circle shadow zoom" alt="avatar3" src="/homeImage/isaia.jpeg"/>
+            <h4 class="mt-2">Isaia</h4>
+          </a>
+        </div>
       </div>
     </div>
     
     {{-- lavora con noi --}}
-    <div class="container-fluid mt-5">
-      <div class="row" id="bg-work">
-          <div class="col-2 job">
+    <div class="container-fluid mt-5 p-0">
+      <div class="row p-0 m-0" id="bg-work">
+          <div class="col-12 col-md-2 job">
             <h5 class="text-white mt-4">Entra a far parte del nostro team e collabora alla crescita della community.</h5>
             <a href="{{route('careers')}}">
               <button class="btn btn_color_3 mt-3 text-white fw-bold border border-white border-4 rounded-pill">Lavora con noi</button>

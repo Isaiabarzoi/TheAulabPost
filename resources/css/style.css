@@ -114,6 +114,7 @@ table{
 
 .div-size{
     height: 500px;
+    width: auto;
 }
 
 /* img ambiente */
@@ -124,7 +125,7 @@ table{
 }
 
 .img-size{
-    width: 350px;
+    width: 500px;
 }
 
 
@@ -251,6 +252,18 @@ table{
     }
 }
 
+.carousel-item.active{
+    background-image: none !important;
+}
+
+.h-div{
+    height: 15%;
+}
+
+.container-img{
+    background-image: url('/public/homeImage/pexels-markus-spiske-97050_copia.jpg');
+    background-size: cover;
+}
 
 
 
@@ -275,4 +288,14 @@ table{
         height: auto;
         max-width: 100%;
     }
+
+    .img-size{
+        height: auto;
+        max-width: 100%;
+    }
+
+    .job{
+        margin: 0 auto;
+    }
+
 }

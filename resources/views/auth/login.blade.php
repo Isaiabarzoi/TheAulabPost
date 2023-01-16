@@ -27,7 +27,7 @@
                 <div class="alert alert-danger">{{ $message }}</div>
               @enderror
     
-            <button type="submit" class="btn btn-outline-dark rounded-pill">Accedi</button>
+            <button type="submit" class="btn btn-outline-dark fw-bold rounded-pill">Accedi</button>
 
             <p class="small mt-2">Non sei ancora registrato? <a href="{{route('register')}}" class="text-dark fw-bold">Clicca qui</a> </p>
           </form>

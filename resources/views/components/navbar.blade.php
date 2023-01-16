@@ -9,11 +9,6 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            @auth
-            <a class="nav-link active nav-line" aria-current="page" href="{{route('article.create')}}">Inserisci articolo</a>          
-            @endauth
-          </li>
-          <li class="nav-item">
             <a class="nav-link active nav-line" href="{{route('article.index')}}">Articoli</a>
           </li>
           <li class="nav-item">
@@ -25,7 +20,7 @@
               Benvenuto {{Auth::user()->name}}
             </a>
             <ul class="dropdown-menu">
-              {{-- <li><a class="dropdown-item" href="">Profilo</a></li> --}}
+            
               @if(Auth::user()->is_admin)
               <li>
                 <a class="dropdown-item" href="{{route('admin.dashboard')}}">Gestione utenti</a>

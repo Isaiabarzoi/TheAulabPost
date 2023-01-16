@@ -59,11 +59,14 @@
         </div>
     </div>
     
-    <div class="bg-warning mt-5">
-      <h2 class="mt-5"> Boh</h2>
-
+    @auth
+    <div class="mt-5 text-center">
+      <a href="{{route('article.create')}}" class="txt-link text-dark">
+        <button class="btn btn_color_2 fw-bold border border-dark border-4 rounded-pill">Ciao {{Auth::user()->name}}, scrivi il tuo nuovo articolo</button>
+      </a>
     </div>
-
+    @endauth
+  
     <div class="container-fluid px-5 mt-5">
       <div class="row">
         <div class="text-center">
@@ -118,7 +121,7 @@
           </div>
           <div class="col-2 mt-4">
             <a href="{{route('article.byCategory', \app\Models\Category::where('name', 'sostenibilità e ambiente')->first())}}">
-              <button class="btn btn-trasparent text-white fw-bold border border-white border-4 rounded-pill">Salviamo l'ambiente</button>
+              <button class="btn btn_color_3 text-white fw-bold border border-white border-4 rounded-pill">Salviamo l'ambiente</button>
             </a>
           </div>
           <div class="d-flex justify-content-center">
@@ -165,16 +168,16 @@
     {{-- lavora con noi --}}
     <div class="container-fluid mt-5">
       <div class="row" id="bg-work">
-          <div class="col-2 mt-4">
+          <div class="col-2 job">
+            <h5 class="text-white mt-4">Entra a far parte del nostro team e collabora alla crescita della community.</h5>
             <a href="{{route('careers')}}">
-              <button class="btn btn-trasparent text-white fw-bold border border-white border-4 rounded-pill">Lavora con noi</button>
+              <button class="btn btn_color_3 mt-3 text-white fw-bold border border-white border-4 rounded-pill">Lavora con noi</button>
             </a>
           </div>
       </div>
     </div>
 
     {{-- scroll to top btn --}}
-
     <button type="button" class="btn btn-floating btn-lg btn_color mx-3" id="btn-back-to-top">
       <i class="fas fa-arrow-up"></i>
     </button>

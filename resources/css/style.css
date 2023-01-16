@@ -123,11 +123,6 @@ table{
     background-position: center;  
 }
 
-.btn:hover{
-    color: black!important;
-    background-color: aliceblue;
-}
-
 .img-size{
     width: 350px;
 }
@@ -167,12 +162,29 @@ table{
     border-radius: 50px;
     }
   
-
-
-.btn_color:hover  {
+.btn_color:hover {
     background-color: rgb(49, 49, 49)!important;
     color:  rgb(255, 255, 255)!important;
 }  
+
+/* btn/home scrivi articolo */
+
+.btn_color_2{
+    background-color:  #18272F!important;
+    color: white;
+}
+
+.btn_color_2:hover{
+    background-color: white!important;
+    color:  #18272F;
+}
+
+/* btn/home ins.articolo, lavora */
+
+.btn_color_3:hover{
+    background-color: white;
+    color: #18272F!important;
+}
   
 /* img lavora con noi */
 
@@ -184,7 +196,14 @@ table{
     
 }
 
-
+.job{
+    margin-top: 50px;
+    margin-left: 30px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.394);
+    height: fit-content;
+}
 /* Register */
 
 .bg-wallpaper{
@@ -202,6 +221,12 @@ table{
 
 .page-link:hover{
     color:  #D3E2E8;
+}
+
+/* link nserisci articolo home */
+.txt-link{
+    text-decoration: none;
+
 }
 
 

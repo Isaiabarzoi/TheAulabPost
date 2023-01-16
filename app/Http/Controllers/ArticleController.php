@@ -23,8 +23,7 @@ class ArticleController extends Controller
     public function index()
     {
 
-        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->get();
-        $articles = Article::paginate(12);
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(12);
         return view('article.index', compact('articles'));
     }
 
@@ -103,6 +102,7 @@ class ArticleController extends Controller
         });
         return view('article.by-user', compact('user', 'articles'));
     }   
+
     /**
      * Show the form for editing the specified resource.
      *

@@ -124,16 +124,36 @@
               <button class="btn btn_color_3 text-white fw-bold border border-white border-4 rounded-pill">Salviamo l'ambiente</button>
             </a>
           </div>
-          <div class="d-flex justify-content-center">
-            <div class="mx-5 ">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/homeImage/pexels-lucien-wanda-2827735.jpg" class="img-size shadow-img zoom" alt="">
+                <h5 class="text-white mt-3">La plastica sta distruggendo il pianeta</h5>
+              </div>
+              <div class="carousel-item">
+                <img src="/homeImage/pexels-pixabay-51951.jpg" class="img-size shadow-img zoom" alt="">
+                <h5 class="text-white mt-3 text-wrap">Il riscaldamento globale causa incendi</h5>
+              </div>
+              <div class="carousel-item">
+                <img src="/homeImage/pexels-ron-lach-9543414.jpg" class="img-size shadow-img zoom" alt="">
+                <h5 class="text-white mt-3 text-wrap">Aiutiamoci e possiamo ancora salvarci</h5>
+              </div>
+            </div>
+          </div>
+          
+          {{-- <div class="d-flex justify-content-center">
+            <div class="mx-5">
               <img src="/homeImage/pexels-lucien-wanda-2827735.jpg" class="img-size shadow-img zoom" alt="">
+              <h5 class="text-white mt-3">La plastica sta distruggendo il pianeta</h5>
             </div>
             <div class="mx-5">
               <img src="/homeImage/pexels-pixabay-51951.jpg" class="img-size shadow-img zoom" alt="">
+              <h5 class="text-white mt-3 text-wrap">Il riscaldamento globale causa incendi</h5>
             </div>
             <div class="mx-5">
               <img src="/homeImage/pexels-ron-lach-9543414.jpg" class="img-size shadow-img zoom" alt="">
-            </div>
+              <h5 class="text-white mt-3 text-wrap">Aiutiamoci e possiamo ancora salvarci</h5>
+            </div> --}}
           </div>
       </div>
     </div>

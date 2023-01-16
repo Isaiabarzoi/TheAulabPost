@@ -13,7 +13,7 @@
     <div class="row justify-content-around">
         @foreach ($articles as $article)
             <div class="col-12 col-md-3 my-2">
-                <div class="card zoom">
+                <div class="card zoom card-size">
                     <img src="{{Storage::url($article->image)}}" class="card-img-top img-cover" alt="" height="200">
                     <div class="card-body">
                         <h5 class="card-title">{{$article->title}}</h5>
@@ -21,7 +21,7 @@
                         <span class="text-muted small fst-italic">Tempo di lettura {{$article->readDuration()}} min</span>
                         <p class="card-text">{{$article->subtitle}}</p>
                         <div class="card-footer text-muted d-flex justify-contentbetween align-items-center">
-                            Redatto il {{$article->created_at->format('d/m/Y')}} da &nbsp <a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a>
+                            Redatto il {{$article->created_at->format('d/m/Y')}} da &nbsp <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class="text-secondary">{{$article->user->name}}</a>
                         </div>
                     </div>
                     <a href="{{route('article.show', compact('article'))}}" class="btn btn-outline-dark">Leggi</a>

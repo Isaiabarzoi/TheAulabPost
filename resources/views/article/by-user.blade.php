@@ -13,7 +13,7 @@
         <div class="row justify-content-around">
             @foreach ($articles as $article)
                 <div class="col-12 col-md-3 my-2">
-                    <div class="card zoom">
+                    <div class="card zoom card-size">
                         <img src="{{Storage::url($article->image)}}" class="card-img-top img-cover" alt="" height="200">
                         <div class="card-body">
                             <h5 class="card-title">{{$article->title}}</h5>

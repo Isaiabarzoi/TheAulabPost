@@ -38,3 +38,18 @@ document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
 }
 
+// Index 
+let BOXES = document.querySelectorAll('#boxEs > *');
+function handleIntersection2(entries2){
+    entries2.map((entry, index) => {
+        if(entry.isIntersecting){
+            entry.target.classList.remove('opacity-0');
+            entry.target.classList.add('slideFromDown');
+            entry.target.style.animationDelay = `${index++}s`;                  //ELIMINA QUESTA RIGA SE NON VUOI
+        }                                                                       //L’EFFETTO RITARDO TRA
+    });                                                                         //UN’ANIMAZIONE E L’ALTRA.
+}
+let observerBoxEs = new IntersectionObserver(handleIntersection2);
+BOXES.forEach(element => {
+    observerBoxEs.observe(element);
+});

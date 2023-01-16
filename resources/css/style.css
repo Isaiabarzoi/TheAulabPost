@@ -204,6 +204,7 @@ table{
     background-color: rgba(0, 0, 0, 0.394);
     height: fit-content;
 }
+
 /* Register */
 
 .bg-wallpaper{
@@ -217,7 +218,7 @@ table{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} 
 
 .page-link:hover{
     color:  #D3E2E8;
@@ -228,6 +229,29 @@ table{
     text-decoration: none;
 
 }
+
+/* Index */
+.card-size{
+    height: 100%;
+}
+
+
+.slideFromDown{
+    animation: slideFromDown both;
+    animation-duration: 1.5s;
+}
+@keyframes slideFromDown {
+    from{
+        opacity: 0;
+        transform: translateY(+100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
 
 
 @media screen and (max-width:600px){

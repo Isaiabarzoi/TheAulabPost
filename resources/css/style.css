@@ -7,6 +7,10 @@ nav {
     border-bottom-right-radius: 10px;
 }
 
+.dropdown-menu {
+    background-color: #D3E2E8;
+}
+
 h1 {
     font-family: 'Old Standard TT', serif;
 }

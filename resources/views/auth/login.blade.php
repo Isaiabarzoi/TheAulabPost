@@ -1,9 +1,9 @@
 <x-layout>
 
     <div class="container w-50 my-5">
-      <div class="row border rounded p-2 shadow">
-        <div class="col-12">
-            <h1 class="display-2 text-center">Accedi</h1>
+      <div class="row">
+        <div class="col-12 container-img border rounded p-2 shadow">
+            <h1 class="display-2 text-center">Bentornato, Accedi</h1>
     
           <form method="POST" action="{{route('login')}}">
             
@@ -27,7 +27,7 @@
                 <div class="alert alert-danger">{{ $message }}</div>
               @enderror
     
-            <button type="submit" class="btn btn-outline-dark fw-bold rounded-pill">Accedi</button>
+            <button type="submit" class="btn btn-outline-dark fw-bold rounded-pill"> Accedi</button>
 
             <p class="small mt-2">Non sei ancora registrato? <a href="{{route('register')}}" class="text-dark fw-bold">Clicca qui</a> </p>
           </form>

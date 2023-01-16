@@ -69,7 +69,7 @@
             
             <div class="mt-2">
                 <button class="btn btn-dark text-white rounded-pill">Modifica articolo</button>
-                <a class="btn btn-outline-dark" href="{{route('home')}}">Torna alla home</a>
+                <a class="btn btn-outline-dark rounded-pill" href="{{route('home')}}">Torna alla home</a>
             </div>
           </form>
         </div>

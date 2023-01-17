@@ -16,11 +16,11 @@
                 <div class="card zoom card-size">
                     <img src="{{Storage::url($article->image)}}" class="card-img-top img-cover" alt="" height="200">
                     <div class="card-body">
-                        <h5 class="card-title">{{$article->title}}</h5>
-                        <p class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</p>
-                        <span class="text-muted small fst-italic">Tempo di lettura {{$article->readDuration()}} min</span>
-                        <p class="card-text">{{$article->subtitle}}</p>
-                        <div class="card-footer text-muted d-flex justify-contentbetween align-items-center">
+                        <h5 class="card-title text-truncate">{{$article->title}}</h5>
+                        <p class="small text-muted fst-italic text-capitalize text-truncate">{{$article->category->name}}</p>
+                        <span class="text-muted small fst-italic text-truncate">Tempo di lettura {{$article->readDuration()}} min</span>
+                        <p class="card-text text-truncate">{{$article->subtitle}}</p>
+                        <div class="card-footer text-muted d-flex justify-contentbetween align-items-center text-truncate">
                             Redatto il {{$article->created_at->format('d/m/Y')}} da &nbsp <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class="text-secondary">{{$article->user->name}}</a>
                         </div>
                     </div>

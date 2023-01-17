@@ -23,7 +23,7 @@
             
               @if(Auth::user()->is_admin)
               <li>
-                <a class="dropdown-item" href="{{route('admin.dashboard')}}">Gestione utenti</a>
+                <a class="dropdown-item" href="{{route('admin.dashboard')}}">Gestione</a>
               </li>
               @endif
               @if(Auth::user()->is_revisor)

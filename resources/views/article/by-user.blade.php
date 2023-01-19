@@ -28,11 +28,15 @@
                                 Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}
                             </div>
                         </div>
-                        <a href="{{route('article.show', compact('article'))}}" class="btn btn-outline-dark">Leggi</a>
+                        <a href="{{route('article.show', compact('article'))}}" class="btn btn_color_2 border-dark">Leggi</a>
                     </div>
                 </div>
             @endforeach
         </div>
+    </div>
+
+    <div class="text-center">
+        <input action="action" type="button" value="Torna indietro" class="btn btn-outline-dark my-5" onclick="window.history.go(-1); return false;" />
     </div>
 
      <!-- Back to top button -->

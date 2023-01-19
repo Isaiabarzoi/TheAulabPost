@@ -83,6 +83,10 @@ class AdminController extends Controller
     }
 
     public function storeCategory(Request $request){
+        $request->validate([
+            'name' => 'required',
+        ]);
+
         Category::create([
             'name' => strtolower($request->name),
         ]);

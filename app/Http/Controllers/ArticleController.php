@@ -89,6 +89,7 @@ class ArticleController extends Controller
 
     public function byCategory(Category $category)
     {
+        $articles = Article::paginate(12);
         $articles = $category->articles->sortByDesc('created_at')->filter(function($article){
             return $article->is_accepted==true;
         });
@@ -186,7 +187,7 @@ class ArticleController extends Controller
     
     public function articleSearch(Request $request) {
         $query = $request->input ('query');
-        $articles = Article::search($query)->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+        $articles = Article::search($query)->where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(12);
 
         return view ('article.search-index', compact ('articles', 'query'));
     }

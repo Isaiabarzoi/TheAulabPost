@@ -40,10 +40,12 @@
         </div>
     </div>
 
-    
-     <span class="col-12 justify-content-end">{{$articles->links('components.paginator')}}</span>
-    
+    <div class="text-center">
+        <input action="action" type="button" value="Torna indietro" class="btn btn-outline-dark my-5" onclick="window.history.go(-1); return false;" />
+    </div>
 
+    <span class="col-12 justify-content-end">{{$articles->links('components.paginator')}}</span>
+    
    <!-- Back to top button -->
     <button type="button" class="btn btn-floating btn-lg btn_color mx-3" id="btn-back-to-top">
         <i class="fas fa-arrow-up"></i>

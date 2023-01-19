@@ -168,7 +168,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="https://www.linkedin.com/in/isaia-barzoi-13469a25a/" class="team-link text-dark">
+          <a href="https://www.linkedin.com/in/isaia-barzoi-web-developer/" class="team-link text-dark">
             <img class="rounded-circle shadow zoom" alt="avatar3" src="/homeImage/isaia.jpeg"/>
             <h4 class="mt-2">Isaia</h4>
           </a>

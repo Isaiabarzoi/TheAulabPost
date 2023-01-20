@@ -89,7 +89,6 @@ class ArticleController extends Controller
 
     public function byCategory(Category $category)
     {
-        $articles = Article::paginate(12);
         $articles = $category->articles->sortByDesc('created_at')->filter(function($article){
             return $article->is_accepted==true;
         });
